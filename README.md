@@ -2,10 +2,10 @@
 A MERN app based on a design for a candy store
 
 ## Whimsical Diagram
-![Diagram](https://whimsical.com/Ua8CMqMtxDGSAeeQM9bR7F)
+[Diagram](https://whimsical.com/Ua8CMqMtxDGSAeeQM9bR7F)
 
 ## Team Expectations
-![Team Expectations file](https://docs.google.com/document/d/1bo-qhG3G4zUr2Ad4pGdEy3UJBluRZs7zFZnK37d1rws/edit?usp=sharing)
+[Team Expectations file](https://docs.google.com/document/d/1bo-qhG3G4zUr2Ad4pGdEy3UJBluRZs7zFZnK37d1rws/edit?usp=sharing)
 
 ## Overview
  - Create a full-stack react app according to design provided by UX/UI team members.
