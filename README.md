@@ -1,11 +1,11 @@
 # GA Dragonflies Cohort, Project 3
 A MERN app based on a design for a candy store
 
-##Whimsical Diagram
-Team Expectations
+## Whimsical Diagram
+## Team Expectations
 
-##Overview
+## Overview
 
-##MVP
+## MVP
 
-##Post-MVP
+## Post-MVP
