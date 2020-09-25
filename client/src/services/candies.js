@@ -12,7 +12,7 @@ export const getCandies = async () => {
 export const getCandy = async id => {
   try {
     const res = await api.get(`/candies/${id}`);
-    return escape.data;
+    return res.data;
   } catch (error) {
     throw error;
   }

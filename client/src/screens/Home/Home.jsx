@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import Samplings from "../../components/Samplings/Samplings";
+// import Samplings from "../../components/Samplings/Samplings";
+import { getCandies } from "../../services/candies";
 
 const Home = () => {
-  const [allCandies, setAllCandies] = ([]);
+  const [allCandies, setAllCandies] = useState([]);
+  console.log(allCandies);
 
   useEffect(() => {
     const fetchCandies = async () => {
@@ -14,16 +16,18 @@ const Home = () => {
     fetchCandies();
   }, []);
 
-  const handleSubmit = e => insert - redirect - here;
+  // const handleSubmit = e => insert - redirect - here;
 
 
   return (
     <Layout>
       <div>change to image-carousel</div>
-      <SearchBar onSubmit={handleSubmit} onChange={handleSearch} />
+      <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
+      />
       <div className="display-case">
         {/* <Favorites /> */}
-        <Samplings candies={allCandies} />
+        products go here
+        {/* <Samplings candies={allCandies} /> */}
       </div>
     </Layout>
   )
