@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Samplings from "../../components/Samplings/Samplings";
 
 const Home = () => {
   const [allCandies, setAllCandies] = ([]);
@@ -20,7 +21,10 @@ const Home = () => {
     <Layout>
       <div>change to image-carousel</div>
       <SearchBar onSubmit={handleSubmit} onChange={handleSearch} />
-      <div>insert-displaycase-here</div>
+      <div className="display-case">
+        {/* <Favorites /> */}
+        <Samplings candies={allCandies} />
+      </div>
     </Layout>
   )
 }
