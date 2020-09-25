@@ -5,7 +5,9 @@ const Candy = new Schema(
   {
     productName: { type: String, required: true },
     price: { type: String, required: true },
-    imgURL: { type: String, required: true },
+    imgURL1: { type: String, required: true },
+    imgURL2: { type: String, required: true },
+    imgURL3: { type: String, required: true }
   },
   { timestamps: true }
 )
