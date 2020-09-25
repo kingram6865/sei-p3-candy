@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Candy = new Schema(
   {
-    name: { type: String, required: true },
+    productName: { type: String, required: true },
     price: { type: String, required: true },
     imgURL: { type: String, required: true },
   },
