@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Home = () => {
+  const [allCandies, setAllCandies] = ([]);
+
+  useEffect(() => {
+    const fetchCandies = async () => {
+      const candies = await getCandies();
+      setAllCandies(candies);
+    }
+    fetchCandies();
+  }, []);
 
   const handleSubmit = e => insert - redirect - here;
+
 
   return (
     <Layout>
