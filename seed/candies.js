@@ -9,52 +9,72 @@ const main = async () => {
         {
           productName: "Sour Worm",
           price: "5.99",
-          imgURL:"1"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/a38fGEq",
+          imgURL3:"https://imgur.com/ksDx8JO"
         },  
         {
           productName: "Heart Candy",
           price: "5.99",
-          imgURL:"2"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },    
         {
           productName: "Happy Mix",
           price: "5.99",
-          imgURL:"3"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Gummy Bears",
           price: "5.99",
-          imgURL:"4"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Fun Mix",
           price: "5.99",
-          imgURL:"5"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Fruity Yayas",
           price: "5.99",
-          imgURL:"6"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Citrus Lollies",
           price: "5.99",
-          imgURL:"7"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Beer Gummies",
           price: "5.99",
-          imgURL:"8"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Assorted Dummied",
           price: "5.99",
-          imgURL:"9"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
         {
           productName: "Assorted MM's",
           price: "4.99",
-          imgURL:"10"
+          imgURL1:"https://imgur.com/F3pWblu",
+          imgURL2:"https://imgur.com/",
+          imgURL3:"https://imgur.com/"
         },
 
       ]
