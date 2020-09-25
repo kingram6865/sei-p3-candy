@@ -8,16 +8,18 @@ const Nav = () => {
       <div className="admin-login">
         <div className="add-NavLink">Admin Login</div>
       </div>
-      <div className="navbar-links">
-        <div className="dead-links">SHOP</div>
-        <div className="dead-links">GIFTS</div>
-        <div className="logo-image">insert-logo-here</div>
-        <div className="dead-links">ABOUT</div>
-        <div className="dead-links">VISIT</div>
-        <div className="cart-image">insert-cart-here</div>
+      <div className="navbar">
+        <div className="navbar-links">
+          <div className="dead-links">SHOP</div>
+          <div className="dead-links">GIFTS</div>
+          <div className="logo-image">insert-logo-here</div>
+          <div className="dead-links">ABOUT</div>
+          <div className="dead-links">VISIT</div>
+          <div className="cart-image">insert-cart-here</div>
+        </div>
       </div>
     </nav>
-  )
+  );
 };
 
 export default Nav;

@@ -1,0 +1,21 @@
+nav {
+  flex: 1;
+  background-color: rgb(231, 250, 173);
+  width: 100vw;
+}
+
+.admin-login {
+  text-align: right;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.navbar-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
