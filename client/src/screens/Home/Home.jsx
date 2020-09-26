@@ -3,6 +3,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 // import Samplings from "../../components/Samplings/Samplings";
 import { getCandies } from "../../services/candies";
+import Carousel from "../../components/carousel/Carousel";
 
 const Home = () => {
   const [allCandies, setAllCandies] = useState([]);
@@ -22,6 +23,7 @@ const Home = () => {
   return (
     <Layout>
       <div>change to image-carousel</div>
+      <Carousel/>
       <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
       />
       <div className="display-case">
