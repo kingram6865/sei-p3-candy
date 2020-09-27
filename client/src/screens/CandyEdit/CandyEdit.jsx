@@ -45,7 +45,7 @@ const CandyEdit = (props) => {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout>
       <div className="candy-edit">
         <div className="image-container">
           <img
