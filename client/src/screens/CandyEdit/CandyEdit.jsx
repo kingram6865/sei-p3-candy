@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import './CandyEdit.css'
 import { useParams, Redirect } from 'react-router-dom'
 import Layout from '../../components/shared/Layout/Layout'
-import { getCandies, getCandy, updateCandy } from '../../services/candies'
+import { getCandy, updateCandy } from '../../services/candies'
 
 const CandyEdit = (props) => {
   const [candy, setCandy] = useState({
-    name: '',
+    productName: '',
     price: '',
     imageURL1: '',
     imageURL2: '',
@@ -45,35 +45,35 @@ const CandyEdit = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="candy-edit">
         <div className="image-container">
-          <img className="edit-candy-image" src={candy.imageURL1} alt={candy.name} />
+          <img className="edit-candy-image" src={candy.imageURL1} alt={candy.productName} />
           <form onSubmit={handleSubmit}>
             <input 
               className="edit-input-image-link"
               placeholder="Image Link"
-              value={candy.imageURL1}
+              value={candy.imageURL1 || ""}
               name="imgURL1"
               required
               onChange={handleChange}
             />
           </form>
         </div>
-        <form className="edit-form" onSubmit>
+        <form className="edit-form" onSubmit={handleSubmit}>
           <input 
             className="input-name"
             placeholder="Candy Name"
-            value={candy.name}
-            name="name"
+            value={candy.productName || ""}
+            name="producName"
             required
-            autofocus
+            autoFocus
             onChange={handleChange}
           />
           <input 
             className="input-price"
             placeholder="Price"
-            value={candy.price}
+            value={candy.price || ""}
             name="price"
             required
             onChange={handleChange}
@@ -81,10 +81,25 @@ const CandyEdit = (props) => {
           <input 
             className="input-description"
             placeholder="Description"
-            value={candy.description}
+            value={candy.description || ""}
             name="description"
             onChange={handleChange}
           />
+          <input 
+            className="input-imageURL2"
+            placeholder="Additional Image 2"
+            value={candy.imageURL2 || ""}
+            name="imageURL2"
+            onChange={handleChange}
+          />
+          <input 
+            className="input-imageURL3"
+            placeholder="Additional Image 2"
+            value={candy.imageURL3 || ""}
+            name="imageURL2"
+            onChange={handleChange}
+          />
+          <button type='submit' className="save-button">Save</button>
         </form>
       </div>
     </Layout>
