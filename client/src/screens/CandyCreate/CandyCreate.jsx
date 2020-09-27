@@ -7,11 +7,12 @@ import { createCandy } from '../../services/candies'
 const CandyCreate = (props) => {
   const [isCreated, setCreated] = useState(false)
   const [candy, setCandy] = useState({
-    name: '',
+    productName: '',
     price: '',
     imageURL1: '',
     imageURL2: '',
-    imageURL3: ''
+    imageURL3: '',
+    description: ''
   })
 
   const handleChange = (event) => {
@@ -72,6 +73,14 @@ const CandyCreate = (props) => {
           name="imageURL3"
           placeholder='Additional Image 2'
           value={candy.imageURL3}
+          required
+          onChange={handleChange}
+        />
+        <input 
+          className="input-description"
+          name="description"
+          placeholder="Description"
+          value={candy.description}
           required
           onChange={handleChange}
         />
