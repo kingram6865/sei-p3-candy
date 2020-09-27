@@ -33,7 +33,7 @@ const CandyCreate = (props) => {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout>
       <form className="create-form" onSubmit={handleSubmit}>
         <input 
           className="input-name"
