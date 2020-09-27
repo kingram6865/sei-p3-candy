@@ -11,70 +11,80 @@ const main = async () => {
           price: "5.99",
           imgURL1:"https://i.imgur.com/a38fGEq.jpg",
           imgURL2:"https://i.imgur.com/F3pWblu.jpg",
-          imgURL3:"https://i.imgur.com/ksDx8JO.jpg"
+        imgURL3: "https://i.imgur.com/ksDx8JO.jpg",
+          description:""
         },  
         {
           productName: "Heart Candy",
           price: "5.99",
           imgURL1:"https://i.imgur.com/laeVcbF.jpg",
           imgURL2:"https://i.imgur.com/xdf61Tz.jpg",
-          imgURL3:"https://i.imgur.com/Xey9SnB.jpg"
+          imgURL3: "https://i.imgur.com/Xey9SnB.jpg",
+          description:""
         },    
         {
           productName: "Happy Mix",
           price: "5.99",
           imgURL1:"https://i.imgur.com/fUlf8Tt.jpg",
           imgURL2:"https://i.imgur.com/sI70Lwh.jpg",
-          imgURL3:"https://i.imgur.com/QVShCya.jpg"
+          imgURL3: "https://i.imgur.com/QVShCya.jpg",
+          description:""
         },
         {
           productName: "Gummy Bears",
           price: "5.99",
           imgURL1:"https://i.imgur.com/DDmp12W.jpg",
           imgURL2:"https://i.imgur.com/Cy7t54X.jpg",
-          imgURL3:"https://i.imgur.com/0NpilhL.jpg"
+          imgURL3: "https://i.imgur.com/0NpilhL.jpg",
+          description:""
         },
         {
           productName: "Fun Mix",
           price: "5.99",
           imgURL1:"https://i.imgur.com/Jejawes.jpg",
           imgURL2:"https://i.imgur.com/Wx7RVi0.jpg",
-          imgURL3:"https://i.imgur.com/jw0krgs.jpg"
+          imgURL3: "https://i.imgur.com/jw0krgs.jpg",
+          description:""
         },
         {
           productName: "Fruity Yayas",
           price: "5.99",
           imgURL1:"https://i.imgur.com/d19ZsWY.jpg",
           imgURL2:"https://i.imgur.com/CrVuBVc.jpg",
-          imgURL3:"https://i.imgur.com/EIoTa8K.jpg"
+          imgURL3: "https://i.imgur.com/EIoTa8K.jpg",
+          description:""
         },
         {
           productName: "Citrus Lollies",
           price: "5.99",
           imgURL1:"https://i.imgur.com/a3WlNWa.jpg",
           imgURL2:"https://i.imgur.com/2xzwfDk.jpg",
-          imgURL3:"https://i.imgur.com/yQCqqrR.jpg"
+          imgURL3: "https://i.imgur.com/yQCqqrR.jpg",
+          description:""
         },
         {
           productName: "Beer Gummies",
           price: "5.99",
           imgURL1:"https://i.imgur.com/IZSYvpn.jpg",
           imgURL2:"https://i.imgur.com/KHLjHsc.jpg",
-          imgURL3:"https://i.imgur.com/GpO3gXR.jpg"
+          imgURL3: "https://i.imgur.com/GpO3gXR.jpg",
+          description:""
         },
         {
           productName: "Assorted Dummied",
           price: "5.99",
           imgURL1:"https://i.imgur.com/ZWrBTcp.jpg",
           imgURL2:"https://i.imgur.com/RYLldwW.jpg",
-          imgURL3:"https://i.imgur.com/OIyHdNS.jpg"
+          imgURL3: "https://i.imgur.com/OIyHdNS.jpg",
+          description:""
         },
         {
           productName: "Assorted MM's",
           price: "4.99",
           imgURL1:"https://i.imgur.com/XqA09C3.jpg",
           imgURL2:"https://i.imgur.com/983P6Af.jpg",
-          imgURL3:"https://i.imgur.com/TIJ8fu9.jpg"
+          imgURL3: "https://i.imgur.com/TIJ8fu9.jpg",
+          description:""
         },
 
       ]
