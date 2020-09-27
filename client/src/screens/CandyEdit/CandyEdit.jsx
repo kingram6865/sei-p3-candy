@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './CandyEdit.css'
 import { useParams, Redirect } from 'react-router-dom'
-import Layout from '../../components/shared/HomeLayout/HomeLayout'
+import Layout from '../../components/shared/Layout/Layout'
 import { getCandy, updateCandy } from '../../services/candies'
 
 const CandyEdit = (props) => {
