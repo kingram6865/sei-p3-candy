@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.display-case {
+  display: flex;
+  flex-flow: row wrap;
+}

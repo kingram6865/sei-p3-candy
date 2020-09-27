@@ -3,9 +3,8 @@ footer {
   width: 100vw;
   background-color: #e1cdfe;
   height: 324px;
-  position: fixed;
-  bottom: 0;
   flex-grow: 1;
+  max-width: 100%;
 }
 
 .footer {
