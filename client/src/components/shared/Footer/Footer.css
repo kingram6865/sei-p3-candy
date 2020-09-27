@@ -2,7 +2,7 @@ footer {
   display: flex;
   width: 100vw;
   background-color: #e1cdfe;
-  height: 324px;
+  max-height: 324px;
   flex-grow: 1;
   max-width: 100%;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../components/shared/Layout/Layout";
+import HomeLayout from "../../components/shared/HomeLayout/HomeLayout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Samplings from "../../components/Samplings/Samplings";
 import { getCandies } from "../../services/candies";
@@ -24,7 +24,7 @@ const Home = () => {
   );
 
   return (
-    <Layout>
+    <HomeLayout>
       <div className="home">
         <div>change to image-carousel</div>
         <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
@@ -34,7 +34,7 @@ const Home = () => {
           {candiesJSX}
         </div>
       </div>
-    </Layout>
+    </HomeLayout>
   );
 };
 

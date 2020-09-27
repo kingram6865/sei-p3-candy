@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './CandyCreate.css'
-import Layout from '../../components/shared/Layout/Layout'
+import Layout from '../../components/shared/HomeLayout/HomeLayout'
 import { Redirect } from 'react-router-dom'
 import { createCandy } from '../../services/candies'
 
