@@ -25,6 +25,14 @@ const CandyEdit = (props) => {
     fetchCandy()
   }, [id])
 
+    const handleChange = (event) => {
+      const { name, value } = event.target
+      setCandy({
+        ...candy,
+        [name]: value
+      })
+    }
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     let { id } = props.match.params
