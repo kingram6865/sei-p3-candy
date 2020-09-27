@@ -21,6 +21,7 @@ export const getCandy = async id => {
 export const createCandy = async candy => {
   try {
     const res = await api.post('/candies', candy)
+    console.log(`[SERVICES: Line 24]: ${res.data}`)
     return res.data;
   } catch (error) {
     throw error;

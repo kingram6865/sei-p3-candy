@@ -4,16 +4,16 @@ const Candy = require('../models/candy')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const candies = 
+    const candies =
     [
         {
           productName: "Sour Worm",
           price: "5.99",
           imgURL1:"https://i.imgur.com/a38fGEq.jpg",
           imgURL2:"https://i.imgur.com/F3pWblu.jpg",
-        imgURL3: "https://i.imgur.com/ksDx8JO.jpg",
+          imgURL3: "https://i.imgur.com/ksDx8JO.jpg",
           description:""
-        },  
+        },
         {
           productName: "Heart Candy",
           price: "5.99",
@@ -21,7 +21,7 @@ const main = async () => {
           imgURL2:"https://i.imgur.com/xdf61Tz.jpg",
           imgURL3: "https://i.imgur.com/Xey9SnB.jpg",
           description:""
-        },    
+        },
         {
           productName: "Happy Mix",
           price: "5.99",
