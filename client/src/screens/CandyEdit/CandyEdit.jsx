@@ -83,8 +83,8 @@ const CandyEdit = (props) => {
             required
             onChange={handleChange}
           />
-          <input
-            className="input-description"
+          <textarea
+            className="textarea-description"
             placeholder="Description"
             value={candy.description}
             name="description"
