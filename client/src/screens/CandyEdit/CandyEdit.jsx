@@ -10,7 +10,8 @@ const CandyEdit = (props) => {
     price: '',
     imageURL1: '',
     imageURL2: '',
-    imageURL3: ''
+    imageURL3: '',
+    description: ''
   })
 
   const [isUpdated, setUpdated] = useState(false)
@@ -67,6 +68,13 @@ const CandyEdit = (props) => {
             value={candy.price}
             name="price"
             required
+            onChange={handleChange}
+          />
+          <input 
+            className="input-description"
+            placeholder="Description"
+            value={candy.description}
+            name="description"
             onChange={handleChange}
           />
         </form>
