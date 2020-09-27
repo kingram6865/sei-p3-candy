@@ -25,6 +25,7 @@ const CandyCreate = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log(candy)
     const created = await createCandy(candy)
     setCreated({ created })
   }

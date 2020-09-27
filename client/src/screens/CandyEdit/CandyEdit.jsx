@@ -45,7 +45,7 @@ const CandyEdit = (props) => {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout>
       <div className="candy-edit">
         <div className="image-container">
           <img className="edit-candy-image" src={candy.imageURL1} alt={candy.productName} />
