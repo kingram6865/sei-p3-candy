@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../components/shared/Layout/Layout";
+import Layout from "../../components/shared/HomeLayout/HomeLayout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Samplings from "../../components/Samplings/Samplings";
 import { getCandies } from "../../services/candies";
