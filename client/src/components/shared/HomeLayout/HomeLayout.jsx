@@ -1,13 +1,13 @@
 import React from "react";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
-import "./Layout.css";
+import "./HomeLayout.css";
 
-const Layout = (props) => {
+const HomeLayout = (props) => {
   return (
-    <div className="layout">
+    <div className="home-layout">
       <Nav />
-      <div className="layout-children">
+      <div className="home-layout-children">
         {props.children}
       </div>
       <Footer />
@@ -15,4 +15,5 @@ const Layout = (props) => {
   )
 };
 
-export default Layout;
+export default HomeLayout;
+

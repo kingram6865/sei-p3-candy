@@ -1,10 +1,10 @@
-.layout {
+.home-layout {
   display: flex;
   height: 100vh;
   max-width: 100%;
   flex-direction: column;
 }
 
-.layout-children {
+.home-layout-children {
   flex: 1;
 }
