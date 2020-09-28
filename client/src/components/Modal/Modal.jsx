@@ -36,9 +36,9 @@ const CandyModal = (props) => {
         <Modal
           isOpen={isOpen}
           onRequestClose={toggleModal}
-          contentLabel="My dialog"
-          className="mymodal"
-          overlayClassName="myoverlay"
+          contentLabel="modal-label"
+          className="modal-info"
+          overlayClassName="modal-overlay"
           closeTimeoutMS={500}
         >
           <div>
