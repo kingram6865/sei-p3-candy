@@ -8,7 +8,7 @@ const Candy = new Schema(
     imgURL1: { type: String, required: true },
     imgURL2: { type: String, required: true },
     imgURL3: { type: String, required: true },
-    description: { type: String, required: true },
+    description: { type: String, required: false },
     reviews: [{
       author: { type: String, required: true },
       rating: { type: String, required: true },
