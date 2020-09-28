@@ -1,0 +1,4 @@
+.candies {
+  display: flex;
+  flex-flow: row wrap;
+}

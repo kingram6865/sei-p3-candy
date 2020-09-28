@@ -9,9 +9,9 @@ const CandyCreate = (props) => {
   const [candy, setCandy] = useState({
     productName: '',
     price: '',
-    imageURL1: '',
-    imageURL2: '',
-    imageURL3: '',
+    imgURL1: '',
+    imgURL2: '',
+    imgURL3: '',
     description: ''
   })
 
@@ -28,10 +28,11 @@ const CandyCreate = (props) => {
     console.log(candy)
     const created = await createCandy(candy)
     setCreated({ created })
+    console.log(isCreated)
   }
 
   if (isCreated) {
-    return <Redirect to={`/candies/${isCreated._id}`} />
+    return <Redirect to={`/candies`} />
   }
 
   return (
@@ -55,34 +56,35 @@ const CandyCreate = (props) => {
         />
         <input 
           className="input-image1"
-          name="imageURL1"
+          name="imgURL1"
           placeholder='Main Image'
-          value={candy.imageURL1}
+          value={candy.imgURL1}
           required
           onChange={handleChange}
         />
         <input 
           className="input-image2"
-          name="imageURL2"
+          name="imgURL2"
           placeholder='Additional Image 1'
-          value={candy.imageURL2}
+          value={candy.imgURL2}
           required
           onChange={handleChange}
         />
         <input 
           className="input-image3"
-          name="imageURL3"
+          name="imgURL3"
           placeholder='Additional Image 2'
-          value={candy.imageURL3}
+          value={candy.imgURL3}
           required
           onChange={handleChange}
         />
-        <input 
-          className="input-description"
+        <textarea 
+          className="textarea-description"
           name="description"
           placeholder="Description"
           value={candy.description}
-          required
+          rows={10}
+          cols={78}          
           onChange={handleChange}
         />
         <button type='submit' className="submit-button">Submit</button>

@@ -1,4 +1,6 @@
 .sampling {
   display: flex;
   flex-flow: column wrap;
+  text-align: left;
+  font-size: 13px;
 }
