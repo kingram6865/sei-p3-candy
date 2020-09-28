@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HomeLayout from "../../components/shared/HomeLayout/HomeLayout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Samplings from "../../components/Samplings/Samplings";
+import Carousel from "../../components/Carousel/Carousel";
 import { getCandies } from "../../services/candies";
 import "./Home.css";
 
