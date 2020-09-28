@@ -19,7 +19,9 @@ const Home = () => {
 
   // const handleSubmit = e => insert - redirect - here;
 
-  const candiesJSX = allCandies.map((candy, i) =>
+  let random = allCandies.sort(() => .5 - Math.random()).slice(0, 6);
+
+  const candiesJSX = random.map((candy, i) =>
     <Samplings _id={candy._id} name={candy.productName} img={candy.imgURL1} price={candy.price} key={i} />
   );
 
