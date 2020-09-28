@@ -1,6 +1,6 @@
-import React from './node_modules/react';
-import Rating from './node_modules/@material-ui/lab/Rating';
-import Box from './node_modules/@material-ui/core/Box';
+import React from 'react';
+import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
 
 export default function StarReview(props) {
   const [value, setValue] = React.useState(0);
