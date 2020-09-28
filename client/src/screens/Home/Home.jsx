@@ -23,7 +23,7 @@ const Home = () => {
 
   const samplesJSX = random.map((candy, i) => (
     <Samplings
-      _id={candy._id}
+      id={candy._id}
       name={candy.productName}
       img={candy.imgURL1}
       price={candy.price}
