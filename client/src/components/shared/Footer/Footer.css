@@ -2,10 +2,9 @@ footer {
   display: flex;
   width: 100vw;
   background-color: #e1cdfe;
-  height: 324px;
-  position: fixed;
-  bottom: 0;
+  max-height: 324px;
   flex-grow: 1;
+  max-width: 100%;
 }
 
 .footer {
