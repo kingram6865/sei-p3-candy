@@ -1,4 +1,18 @@
-.candies {
+.candies-container-left {
   display: flex;
   flex-flow: row wrap;
+  width: 600px;
+  margin: 0px 50px;
+}
+
+.candies-screen-container {
+  display: flex;
+  width: 90vw;
+  margin: 30px auto 30px;
+}
+
+.edit-add-container {
+  display: flex;
+  width: 600px;
+  margin-left: 100px;
 }
