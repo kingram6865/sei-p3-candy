@@ -29,6 +29,7 @@ const Home = () => {
     <HomeLayout>
       <div className="home">
         <div>change to image-carousel</div>
+        <Carousel/>
         <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
         />
         <div className="display-case">
