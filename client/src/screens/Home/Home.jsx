@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HomeLayout from "../../components/shared/HomeLayout/HomeLayout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Samplings from "../../components/Samplings/Samplings";
+import Carousel from "../../components/Carousel/Carousel";
 import { getCandies } from "../../services/candies";
 import "./Home.css";
 
@@ -34,7 +35,8 @@ const Home = () => {
   return (
     <HomeLayout>
       <div className="home">
-        <div className="img-carousel">change to image-carousel</div>
+        <div className="img-carousel"><Carousel /></div>
+
         <div className="searchbar-container">
           <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
           />
