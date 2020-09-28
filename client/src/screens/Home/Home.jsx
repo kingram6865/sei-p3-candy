@@ -3,7 +3,7 @@ import HomeLayout from "../../components/shared/HomeLayout/HomeLayout";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Samplings from "../../components/Samplings/Samplings";
 import { getCandies } from "../../services/candies";
-import Carousel from "../../components/carousel/Carousel";
+import "./Home.css";
 
 const Home = () => {
   const [allCandies, setAllCandies] = useState([]);
