@@ -34,7 +34,8 @@ const Home = () => {
   return (
     <HomeLayout>
       <div className="home">
-        <div className="img-carousel">change to image-carousel</div>
+        <div className="img-carousel"><Carousel /></div>
+
         <div className="searchbar-container">
           <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
           />
