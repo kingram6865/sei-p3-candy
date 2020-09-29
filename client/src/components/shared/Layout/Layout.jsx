@@ -8,6 +8,7 @@ const Layout = (props) => {
     <div className="layout">
       <Nav />
       <div className="layout-children">
+        <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/PinkDripHeader.jpg)`}} className="layout-header-img"></div>
         {props.children}
       </div>
       <Footer />

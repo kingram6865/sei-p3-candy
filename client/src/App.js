@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './screens/Home/Home';
 import CandyCreate from './screens/CandyCreate/CandyCreate'
 import CandyEdit from './screens/CandyEdit/CandyEdit'
-import Candies from './screens/Candies/Candies'
+// import Candies from './screens/Candies/Candies'
 import CandyDetail from './screens/CandyDetail/CandyDetail'
 import CandyManager from './screens/CandyManager/CandyManager'
 
