@@ -1,18 +1,33 @@
 .candies-container-left {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   width: 600px;
-  margin: 0px 50px;
+  margin-left: 131px;
+  align-items: space-between;
 }
 
 .candies-screen-container {
   display: flex;
   width: 90vw;
-  margin: 30px auto 30px;
+  margin: 120px auto 30px;
+}
+
+.candy-each-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0px 8px;
 }
 
 .edit-add-container {
   display: flex;
   width: 600px;
   margin-left: 100px;
+}
+
+.candies-text {
+  font-size: 41px;
+  /* width: 600px; */
+  text-align: center;
+  margin-bottom: 80px;
 }

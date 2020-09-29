@@ -33,7 +33,10 @@ const Candies = (props) => {
   return (
     <div className="candies-screen-container">
       <div className="candies-container-left">
-        { productsJSX }
+        <div className="candies-text">Your Products</div>
+        <div className="candy-each-container">
+          { productsJSX }
+        </div>
       </div>
       <div className="edit-add-container">
         <h2>Placeholder ADD/EDIT</h2>
