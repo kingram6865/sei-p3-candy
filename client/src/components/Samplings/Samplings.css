@@ -1,0 +1,16 @@
+.sampling {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+  font-size: 13px;
+}
+
+.sampling-link {
+  text-decoration: none;
+  color: black;
+}
+
+.sampling-img:hover {
+  opacity: 0.7;
+  transition: 250ms all;
+}

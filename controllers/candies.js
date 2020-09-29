@@ -13,9 +13,9 @@ const getCandies = async (req, res) => {
 }
 
 const getCandy = async (req, res) => {
-    try {
+  try {
         const { id } = req.params
-        const candy = await Candy.findById(id)
+    const candy = await Candy.findById(id)
         if (candy) {
             return res.json(candy)
         }

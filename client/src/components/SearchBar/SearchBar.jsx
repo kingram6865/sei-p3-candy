@@ -5,7 +5,7 @@ const SearchBar = (props) => {
   return (
     <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
       <input
-        className="searh-input"
+        className="search-input"
         value={props.value}
         onChange={(e) => props.onChange(e)}
         name="Search"
