@@ -18,7 +18,7 @@
 .details-container {
   display: flex;
   flex-direction: column;
-  margin-left: 85px;
+  /* margin-left: 50px; */
 }
 
 .candy-detail {
@@ -29,8 +29,14 @@
 
 .candy-detail-img-container {
   display: flex;
+  width: 50vw;
 }
 
 .candy-detail-image {
   margin: 0px 3px;
+  width: 20%;
+}
+
+.button-container {
+  display: flex;
 }
