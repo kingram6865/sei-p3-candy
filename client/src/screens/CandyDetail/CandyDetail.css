@@ -1,7 +1,36 @@
 .candy-detail-container {
   display: flex;
+  flex-direction: column;
+}
+
+.nitty-gritty {
+  display: flex;
+  width: 90vw;
+  margin: 20px auto 0px;
+}
+
+.nitty-gritty span {
+  font-size: 35px;
+  font-weight: 900;
+  margin-left: 139px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 85px;
+}
+
+.candy-detail {
+  display: flex;
+  margin: 120px auto;
+  width: 80vw;
+}
+
+.candy-detail-img-container {
+  display: flex;
 }
 
 .candy-detail-image {
-  width: 30%;
+  margin: 0px 3px;
 }
