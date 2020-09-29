@@ -1,0 +1,7 @@
+.candy-detail-container {
+  display: flex;
+}
+
+.candy-detail-image {
+  width: 30%;
+}
