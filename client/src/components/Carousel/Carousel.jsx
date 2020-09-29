@@ -5,15 +5,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function CarouselComponent() {
     return (
         <div class="carousel-wrapper">
-        <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
+        <Carousel useKeyboardArrows autoPlay showIndicators={false} showThumbs={false}>
                 <div>
-                    <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel1.png`} alt="carousel-img" />
+                    <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel1.png`} className="carousel-img" />
                 </div>
                 <div>
-                    <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel2.png`} alt="carousel-img" />
+                    <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel2.png`} className="carousel-img" />
                 </div>
                 <div>
-                    <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel3.png`} alt="carousel-img" />
+                    <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel3.png`} className="carousel-img" />
                 </div>
             </Carousel>
         </div>
