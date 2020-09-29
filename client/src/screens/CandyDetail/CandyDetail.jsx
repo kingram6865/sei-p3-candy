@@ -19,12 +19,14 @@ const CandyDetail = (props) => {
     fetchCandy();
   }, [id]);
 
+
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+  console.log(candy.imgURL1)
 
   const CandyImgDiv1 = styled.div`
-    background-image: url(${candy.imgURL1});
+    background-image: url(${!candy.imgURL1 ? "Loading..." : candy.imgURL1});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,23 +34,23 @@ const CandyDetail = (props) => {
     width: 80px;
   `;
 
-  const CandyImgDiv2 = styled.div`
-    background-image: url(${candy.imgURL2});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80px;
-    width: 80px;
-  `;
+  // const CandyImgDiv2 = styled.div`
+  //   background-image: url(${candy.imgURL2});
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  //   height: 80px;
+  //   width: 80px;
+  // `;
 
-  const CandyImgDiv3 = styled.div`
-    background-image: url(${candy.imgURL3});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80px;
-    width: 80px;
-  `;
+  // const CandyImgDiv3 = styled.div`
+  //   background-image: url(${candy.imgURL3});
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  //   height: 80px;
+  //   width: 80px;
+  // `;
 
   return (
     <Layout>
@@ -60,23 +62,23 @@ const CandyDetail = (props) => {
           <div className="candy-detail-img-container">
             <CandyImgDiv1
               className="candy-detail-image"
-              imgURL1={props.imgURL1}
-              alt={props.productName}
+              imgURL1={candy.imgURL1}
+              alt={candy.productName}
             />
-            <CandyImgDiv2
+            {/* <CandyImgDiv2
               className="candy-detail-image"
-              imgURL2={props.imgURL2}
+              imgURL2={candy.imgURL2}
             />
             <CandyImgDiv3
               className="candy-detail-image"
-              imgURL3={props.imgURL3}
-            />
+              imgURL3={candy.imgURL3}
+            /> */}
             {/* <img
               className="candy-detail-image"
               src={candy.imgURL1}
               alt={candy.productName}
-            /> */}
-            {/* <img
+            />
+            <img
               className="candy-detail-image"
               src={candy.imgURL2}
               alt={candy.productName}
