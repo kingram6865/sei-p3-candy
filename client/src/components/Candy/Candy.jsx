@@ -1,20 +1,32 @@
-import React from 'react'
-import './Candy.css'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import "./Candy.css";
+
+const CandyImgDiv = styled.div`
+  background-image: url(${(props) => props.imgURL1});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 136px;
+  width: 168px;
+`;
 
 const Candy = (props) => {
   return (
-    <>
-      <Link className="candy" to={`candies/${props._id}`}>
-        <img className="candy-image1" src={props.imgURL1} alt={props.productName}/>
-        {/* <img className="candy-image2" src={props.imgURL2} alt={props.productName}/>
+    // <div className="candy-each-container">
+      <div className="each-candy">
+        <Link className="candy-each-link" to={`/candies/${props._id}`}>
+          <CandyImgDiv className="candy-each-image1" imgURL1={props.imgURL1} />
+          {/* <img className="candy-image2" src={props.imgURL2} alt={props.productName}/>
         <img className="candy-image3" src={props.imgURL3} alt={props.productName}/> */}
-        <div className="candy-name">{props.productName}</div>
-        <div className="price">{`$${props.price}`}</div>
-        <div className="description">{props.description}</div>
-      </Link>
-    </>
-  )
-}
+          <div className="candy-each-name">{props.productName}</div>
+          <div className="candy-each-price">{`$${props.price}`}</div>
+          <div className="description">{props.description}</div>
+        </Link>
+      </div>
+    // </div>
+  );
+};
 
-export default Candy
+export default Candy;
