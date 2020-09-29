@@ -1,5 +1,23 @@
+.candy-each-link {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 50px;
+}
 
-img {
-  height: 200px;
-  width: 200px;
+.candy-each-image1 {
+  margin-bottom: 6px;
+}
+
+.candy-each-name {
+  font-size: 15px;
+}
+
+.candy-each-price {
+  font-size: 13px;
+}
+
+.each-candy {
+  display: flex;
+  margin: 0px 8px;
+  align-items: space-between;
 }
