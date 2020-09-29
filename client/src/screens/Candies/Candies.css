@@ -10,6 +10,7 @@
   display: flex;
   width: 90vw;
   margin: 120px auto 30px;
+  background: linear-gradient(rgb(145, 145, 145), rgb(145, 145, 145)) no-repeat center/1px 90%;
 }
 
 .candy-each-container {
