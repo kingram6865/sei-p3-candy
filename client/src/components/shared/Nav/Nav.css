@@ -12,10 +12,14 @@ nav {
   background-image: url("/images/MamasCandyColors.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 22px;
 }
 
-.admin-login div {
+.admin-link {
+  text-decoration: none;
+  color: black;
   margin-right: 40px;
+  font-size: 18px;
 }
 
 .navbar {

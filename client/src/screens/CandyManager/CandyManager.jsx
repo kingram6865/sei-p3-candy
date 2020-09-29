@@ -1,12 +1,13 @@
 import React from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import Candies from "../Candies/Candies";
+import "./CandyManager.css";
 
 const CandyManager = () => {
   return (
     <Layout>
       <div className="product-manager">
-        <h2>Product Manager</h2>
+        <span>Product Manager</span>
       </div>
       <div className="candy-manager-container">
         <Candies />

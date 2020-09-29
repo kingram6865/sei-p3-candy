@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Nav.css";
-// import logo from "./images/SUGAR-MAMA-LOGO-SQUARE.png"
 
 const Nav = () => {
   return (
     <nav>
       <div className="admin-login">
-        <div className="add-NavLink">Admin Login</div>
+        <NavLink to="/candies" className="admin-link">ADMIN LOGIN</NavLink>
       </div>
       <div className="navbar">
         <div className="navbar-links">
