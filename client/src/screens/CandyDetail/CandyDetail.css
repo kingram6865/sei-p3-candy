@@ -5,38 +5,100 @@
 
 .nitty-gritty {
   display: flex;
-  width: 90vw;
-  margin: 20px auto 0px;
+  width: 70vw;
+  margin: 20px auto 20px;
 }
 
 .nitty-gritty span {
   font-size: 35px;
   font-weight: 900;
-  margin-left: 139px;
+  text-shadow: .5px .5px 5px white;
 }
 
 .details-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 80px 10px 0px;
   /* margin-left: 50px; */
 }
 
 .candy-detail {
   display: flex;
   margin: 120px auto;
-  width: 80vw;
+  width: 70vw;
 }
 
 .candy-detail-img-container {
   display: flex;
+  flex-direction: column;
   width: 50vw;
+  margin-right: 85px;
+}
+
+.selected-img {
+  display: flex;
+  width: 352px;
+  height: 256px;
+}
+
+.thumbnail-imgs-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .candy-detail-image {
   margin: 0px 3px;
-  width: 20%;
+}
+
+.candy-detail-image:hover {
+  opacity: 0.7;
+  transition: 250ms all;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.price {
+  font-size: 19px;
+}
+
+.name, .price {
+  margin: 5px;
+}
+
+.description {
+  font-size: 28px;
+  margin-top: 10px;
 }
 
 .button-container {
   display: flex;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
+
+.edit-button {
+  margin-right: 16px;
+}
+
+.edit-button a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.button-container button {
+  width: 168px;
+  height: 31px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* 168, 31 */
