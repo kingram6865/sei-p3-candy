@@ -4,8 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function CarouselComponent() {
     return (
-        <div class="carousel-wrapper">
-        <Carousel useKeyboardArrows autoPlay showIndicators={false} showThumbs={false}>
+        <div className="carousel-wrapper">
+        <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
                 <div>
                     <img src={`${process.env.PUBLIC_URL}/carousel-img/carousel1.png`} className="carousel-img" />
                 </div>

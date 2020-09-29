@@ -8,3 +8,13 @@
 .layout-children {
   flex: 1;
 }
+
+.layout-header-img {
+  background-size: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100vw;
+  min-width: 100%;
+  z-index: -1;
+}
