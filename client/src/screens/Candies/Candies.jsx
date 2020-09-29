@@ -17,7 +17,7 @@ const Candies = (props) => {
     fetchCandies()
   }, [])
 
-  const productsJSX = queriedCandies.map((candy, index) => 
+  const productsJSX = queriedCandies.map((candy, index) =>
     <Candy
       _id={candy._id}
       productName={candy.productName}
@@ -34,6 +34,9 @@ const Candies = (props) => {
     <div className="candies-screen-container">
       <div className="candies-container-left">
         <div className="candies-text">Your Products</div>
+        <div className="candy-link-modal">
+          Click picture to edit item
+        </div>
         <div className="candy-each-container">
           { productsJSX }
         </div>
