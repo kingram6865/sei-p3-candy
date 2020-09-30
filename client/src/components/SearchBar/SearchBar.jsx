@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 import { getCandies } from '../../services/candies'
 import handleSearch from '../../utils/search.js'
 import "./SearchBar.css";
@@ -15,10 +16,15 @@ const SearchBar = (props) => {
     fetchCandy();    
   }, [])
 
-  
+  const handleSubmit = event => {
+    event.preventDefault()
+    if (queryResults.length) {
+      return <Redirect to={`/candies/search-results/${queryResults}`} />
+    }
+  }
 
   return (
-    <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
+    <form className="search-form" onSubmit={handleSubmit}>
       <input
         className="search-input"
         value={props.value}
