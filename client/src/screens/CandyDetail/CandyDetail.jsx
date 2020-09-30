@@ -3,7 +3,6 @@ import "./CandyDetail.css";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCandy, deleteCandy } from "../../services/candies";
 import { useParams, Link } from "react-router-dom";
-import styled from "styled-components";
 
 const CandyDetail = (props) => {
   const [candy, setCandy] = useState(null);
@@ -24,36 +23,6 @@ const CandyDetail = (props) => {
     return <h1>Loading...</h1>;
   }
 
-  const CandyImgDiv1 = styled.div`
-    background-image: url(${!candy.imgURL1 ? "Loading..." : candy.imgURL1});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80px;
-    width: 80px;
-    cursor: pointer;
-  `;
-
-  const CandyImgDiv2 = styled.div`
-    background-image: url(${candy.imgURL2});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80px;
-    width: 80px;
-    cursor: pointer;
-  `;
-
-  const CandyImgDiv3 = styled.div`
-    background-image: url(${candy.imgURL3});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80px;
-    width: 80px;
-    cursor: pointer;
-  `;
-
   return (
     <Layout>
       <div className="candy-detail-container">
@@ -63,47 +32,62 @@ const CandyDetail = (props) => {
         <div className="candy-detail">
           <div className="candy-detail-img-container">
             <div className="selected-img-container">
-              <img
-                src={selectedImg === "" ? candy.imgURL1 : selectedImg}
+              <div
+                style={{
+                  backgroundImage: `url("${selectedImg === "" ? candy.imgURL1 : selectedImg}")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '256px',
+                  width: '352px',
+                }}
                 className="selected-img"
                 alt={candy.productName}
-              />
-            </div>
+              ></div>
             <div className="thumbnail-imgs-container">
-              <CandyImgDiv1
+              <div
                 className="candy-detail-image"
-                imgURL1={candy.imgURL1}
+                style={{
+                  backgroundImage: `url("${candy.imgURL1})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '80px',
+                  width: '80px',
+                  cursor: 'pointer'
+                }}
                 alt={candy.productName}
                 onClick={(e) => setSelectedImg(candy.imgURL1)}
-              />
-              <CandyImgDiv2
+              ></div>
+              <div
                 className="candy-detail-image"
-                imgURL2={candy.imgURL2}
+                style={{
+                  backgroundImage: `url("${candy.imgURL2})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '80px',
+                  width: '80px',
+                  cursor: 'pointer'
+                }}
                 alt={candy.productName}
                 onClick={(e) => setSelectedImg(candy.imgURL2)}
-              />
-              <CandyImgDiv3
+              ></div>
+              <div
                 className="candy-detail-image"
-                imgURL3={candy.imgURL3}
+                style={{
+                  backgroundImage: `url("${candy.imgURL3})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '80px',
+                  width: '80px',
+                  cursor: 'pointer'
+                }}
                 alt={candy.productName}
                 onClick={(e) => setSelectedImg(candy.imgURL3)}
-              />
+              ></div>
             </div>
-            {/* <img
-              className="candy-detail-image"
-              src={candy.imgURL1}
-              alt={candy.productName}
-            />
-            <img
-              className="candy-detail-image"
-              src={candy.imgURL2}
-              alt={candy.productName}
-            />
-            <img
-              className="candy-detail-image"
-              src={candy.imgURL3}
-              alt={candy.productName}
-            /> */}
           </div>
 
           <div className="details-container">
