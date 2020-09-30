@@ -42,7 +42,7 @@ const Candies = (props) => {
         </div>
       </div>
       <div className="edit-add-container">
-        <h2>Placeholder ADD/EDIT</h2>
+        <div className="edit-add-text">Placeholder</div>
       </div>
     </div>
   )
