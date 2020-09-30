@@ -18,11 +18,9 @@ const Candy = (props) => {
       <div className="each-candy">
         <Link className="candy-each-link" to={`/candies/${props._id}`}>
           <CandyImgDiv className="candy-each-image1" imgURL1={props.imgURL1} />
-          {/* <img className="candy-image2" src={props.imgURL2} alt={props.productName}/>
-        <img className="candy-image3" src={props.imgURL3} alt={props.productName}/> */}
           <div className="candy-each-name">{props.productName}</div>
           <div className="candy-each-price">{`$${props.price}`}</div>
-          <div className="description">{props.description}</div>
+          {/* <div className="description">{props.description}</div> */}
         </Link>
       </div>
     // </div>

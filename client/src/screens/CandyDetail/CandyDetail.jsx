@@ -23,7 +23,6 @@ const CandyDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-  console.log(candy.imgURL1);
 
   const CandyImgDiv1 = styled.div`
     background-image: url(${!candy.imgURL1 ? "Loading..." : candy.imgURL1});
@@ -67,6 +66,7 @@ const CandyDetail = (props) => {
               <img
                 src={selectedImg === "" ? candy.imgURL1 : selectedImg}
                 className="selected-img"
+                alt={candy.productName}
               />
             </div>
             <div className="thumbnail-imgs-container">
