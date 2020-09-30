@@ -6,6 +6,7 @@ import CandyEdit from './screens/CandyEdit/CandyEdit'
 // import Candies from './screens/Candies/Candies'
 import CandyDetail from './screens/CandyDetail/CandyDetail'
 import CandyManager from './screens/CandyManager/CandyManager'
+import SearchResults from './screens/SearchResults/SearchResults'
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/candies/:id" component={CandyDetail} />
         <Route path="/add-candy" component={CandyCreate} />
         <Route exact path="/candies/:id/edit" component={CandyEdit} />
+        <Route exact path="/candies/search-results/:queryResults" component={SearchResults} />
       </Switch>
     </div>
   );

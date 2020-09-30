@@ -22,7 +22,6 @@ const CandyDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-  console.log(candy.imgURL1);
 
   return (
     <Layout>
@@ -45,7 +44,6 @@ const CandyDetail = (props) => {
                 className="selected-img"
                 alt={candy.productName}
               ></div>
-            </div>
             <div className="thumbnail-imgs-container">
               <div
                 className="candy-detail-image"

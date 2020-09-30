@@ -12,7 +12,7 @@
 .nitty-gritty span {
   font-size: 35px;
   font-weight: 900;
-  text-shadow: .5px .5px 5px white;
+  text-shadow: .5px .5px 10px white;
 }
 
 .details-container {
