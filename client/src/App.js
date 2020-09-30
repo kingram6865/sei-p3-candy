@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/candies/:id" component={CandyDetail} />
         <Route path="/add-candy" component={CandyCreate} />
         <Route exact path="/candies/:id/edit" component={CandyEdit} />
-        <Route exact path="/candies/search-results/:queryResults" component={SearchResults} />
+        <Route exact path="/candies/" component={SearchResults} />
       </Switch>
     </div>
   );

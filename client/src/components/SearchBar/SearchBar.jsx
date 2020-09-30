@@ -16,13 +16,28 @@ const SearchBar = (props) => {
     fetchCandy();    
   }, [])
 
+  useEffect(() => {
+    // const redirect = () => {
+    //   console.log(queryResults)
+    //   return <Redirect to={`/candies/}`} />
+    // }
+
+    // if (queryResults){
+    //   redirect()
+    // }
+    console.log(`[SearchBar: useEffect] ${queryResults.length}`)
+  },[queryResults])
+
+
+
   const handleSubmit = event => {
     event.preventDefault()
-    if (queryResults.length) {
-      return <Redirect to={`/candies/search-results/${queryResults}`} />
-    } else {
-      console.log(`[SearchBar]: ${event.target.value}`)
-    }
+    console.log(`[SearchBar Submit]: ${event.target.value}`)
+    // if (queryResults.length) {
+    //   return <Redirect to={`/candies/search-results/${queryResults}`} />
+    // } else {
+    //   console.log(`[SearchBar]: ${event.target.value}`)
+    // }
   }
 
   return (
@@ -30,8 +45,11 @@ const SearchBar = (props) => {
       <input
         className="search-input"
         value={props.value}
-        onChange={(e) => setQueryResults(handleSearch(e.target.value, inventory))}
-        name="Search"
+        onChange={(e) => {
+          setQueryResults(handleSearch(e.target.value, inventory))
+          // console.log(handleSearch(e.target.value, inventory))
+        }}
+        name="search"
         placeholder="How Can Mama Help?"
         type="text"
         autoFocus
