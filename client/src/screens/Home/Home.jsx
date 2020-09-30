@@ -8,7 +8,6 @@ import "./Home.css";
 
 const Home = () => {
   const [allCandies, setAllCandies] = useState([]);
-  console.log(allCandies);
 
   useEffect(() => {
     const fetchCandies = async () => {
@@ -17,8 +16,6 @@ const Home = () => {
     };
     fetchCandies();
   }, []);
-
-  // const handleSubmit = e => insert - redirect - here;
 
   let random = allCandies.sort(() => 0.5 - Math.random()).slice(0, 6);
 
