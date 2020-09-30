@@ -20,6 +20,8 @@ const SearchBar = (props) => {
     event.preventDefault()
     if (queryResults.length) {
       return <Redirect to={`/candies/search-results/${queryResults}`} />
+    } else {
+      console.log(`[SearchBar]: ${event.target.value}`)
     }
   }
 
@@ -38,4 +40,4 @@ const SearchBar = (props) => {
   )
 };
 
-export default SearchBar;
+export default SearchBar
