@@ -1,0 +1,27 @@
+.favorites-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.favorites-name {
+  font-size: 20px;
+  display: flex;
+  font-weight: 900;
+  margin: 125px 0px 0px 32px;
+  text-shadow: .5px .5px 10px rgb(148, 148, 148);
+}
+
+.tap-in {
+  display: flex;
+  height: 27px;
+  width: 90px;
+  background-color: white;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 300px;
+  margin-left: 240px;
+}
