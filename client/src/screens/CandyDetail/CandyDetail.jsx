@@ -110,6 +110,7 @@ const CandyDetail = (props) => {
           </div>
         </div>
       </div>
+      </div>
     </Layout>
   );
 };
