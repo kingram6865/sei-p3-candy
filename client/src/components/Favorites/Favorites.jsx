@@ -10,7 +10,7 @@ const Favorites = (props) => {
           className="fav-img-div"
           style={{
             background:
-              `linear-gradient(to top, rgba(135, 135, 135, .8), transparent 50%), url("${props.img}")`,
+              `linear-gradient(to top, rgba(148, 148, 148, 1), transparent 50%), url("${props.img}")`,
             // backgroundImage: `url("${props.img}")`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
