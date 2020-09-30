@@ -105,6 +105,9 @@ const CandyDetail = (props) => {
               >
                 Delete Item
               </button>
+              <div className="reviews">
+                <Reviews />
+              </div>
             </div>
           </div>
         </div>

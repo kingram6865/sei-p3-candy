@@ -19,6 +19,7 @@ class CandyCards extends Component{
       index ? <CandyCard imgURL={candies.imgURL1} name={candies.productName} price={candies.price} />
     )
 
+
     return (
       <div className='candy-cards'>
         <div className='cards'>
