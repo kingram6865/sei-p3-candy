@@ -11,7 +11,7 @@ const Candy = new Schema(
     description: { type: String, required: false },
     reviews: [{
       author: { type: String, required: true },
-      rating: { type: String, required: true },
+      rating: { type: Number, required: true },
       comment: { type: String, required: true},
     }]
   },
