@@ -6,46 +6,17 @@ import CandyEdit from './screens/CandyEdit/CandyEdit'
 import CandyDetail from './screens/CandyDetail/CandyDetail'
 import CandyManager from './screens/CandyManager/CandyManager'
 import SearchResults from './screens/SearchResults/SearchResults'
-import { AZ, ZA, lowestFirst, highestFirst } from "./utils/sort";
 
 import './App.css';
 
 function App() {
   const [queryResults, setQueryResults] = useState([])
-  const [sortType, setSortType] = useState([]);
-  const [queriedCandy, setQueriedCandy] = useState([])
   
   const handleSearch = (item, arr) => {
     const queryResult = arr.filter(candy => candy.productName.toLowerCase().includes(item.toLowerCase()))
     return(queryResult)
   }
 
-  const handleSort = (e) => {
-    const type = e.target.value;
-    console.log(type)
-    setSortType(type);
-    switch (sortType) {
-      case "name-ascending":
-        setQueriedCandy(AZ(queryResults));
-        break;
-      case "name-descending":
-        setQueriedCandy(ZA(queryResults));
-        break;
-      case "price-ascending":
-        setQueriedCandy(lowestFirst(queryResults));
-        break;
-      case "price-descending":
-        setQueriedCandy(highestFirst(queryResults));
-        break;
-      default:
-        break;
-    }
-  };
-
-// render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyDetail handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyCreate handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyEdit handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
   return (
     <div className="App">
       <Switch>
@@ -54,17 +25,6 @@ function App() {
         <Route exact path="/candies/:id" render={(props) =>  <CandyDetail handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
         <Route path="/add-candy" render={(props) =>  <CandyCreate handleSearch={handleSearch} setQueryResults={setQueryResults}/>} />
         <Route exact path="/candies/:id/edit" render={(props) =>  <CandyEdit handleSearch={handleSearch} setQueryResults={setQueryResults}/>} />
-        <Route exact path="/search-candies"
-          render={(props) =>
-            <SearchResults
-              handleSearch={handleSearch}
-              setQueryResults={setQueryResults}
-              queryResults={queryResults}
-              handleSort={handleSort}
-              queriedCandy={queriedCandy}
-              setQueriedCandy={setQueriedCandy}
-            />}
-        />
         <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
       </Switch>
     </div>
