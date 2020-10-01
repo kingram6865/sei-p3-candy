@@ -9,6 +9,9 @@ import "./Home.css";
 
 const Home = (props) => {
   const [allCandies, setAllCandies] = useState([]);
+  const blurbsArr = ["LIFE IS SHORT, MAKE IT SWEET", "DON'T RESIST IT, TASTE IT", "HITS THE SWEET SPOT", "A SWEET TOOTH'S PARADISE", "A WILD FLAVOR TRIP"];
+
+  const blurbs = blurbsArr.sort(() => 0.5 - Math.random()).slice(0, 3);
 
   useEffect(() => {
     const fetchCandies = async () => {
@@ -39,6 +42,7 @@ const Home = (props) => {
       img={candy.imgURL3}
       price={candy.price}
       key={i}
+      blurb={blurbs.pop()}
     />
   ));
 
