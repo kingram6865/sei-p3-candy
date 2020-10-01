@@ -4,7 +4,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getCandy, deleteCandy, updateCandy } from "../../services/candies";
 import { useParams, Link } from "react-router-dom";
 
-import ReviewForm from '../../components/ReviewForm/ReviewForm'
+// import ReviewForm from '../../components/ReviewForm/ReviewForm'
 import Reviews from '../../components/Reviews/Reviews'
 
 const CandyDetail = (props) => {
@@ -34,7 +34,7 @@ const CandyDetail = (props) => {
       [name]: value
     })
   }
-o
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     candy.reviews.push(review)
@@ -135,7 +135,7 @@ o
         </div>
       </div>
       <div className="reviews-wrapper">
-        <ReviewForm author={review.author} rating={review.rating} description={review.description} onSubmit={handleSubmit} onChange={handleSubmit} />
+        {/* <ReviewForm author={review.author} rating={review.rating} description={review.description} onSubmit={handleSubmit} onChange={handleSubmit} /> */}
         <Reviews reviews={candy.reviews} />
       </div>
     </Layout>
