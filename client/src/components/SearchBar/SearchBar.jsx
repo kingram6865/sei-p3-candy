@@ -5,7 +5,6 @@ import { getCandies } from '../../services/candies'
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
-  
   const [inventory, setInventory] = useState([])
   const history  = useHistory()
 
@@ -14,7 +13,7 @@ const SearchBar = (props) => {
       const candy = await getCandies();
       setInventory(candy);
     };
-    fetchCandy();    
+    fetchCandy();
   }, [])
 
   const handleSubmit = event => {
