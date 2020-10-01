@@ -34,7 +34,7 @@ const CandyDetail = (props) => {
       [name]: value
     })
   }
-o
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     candy.reviews.push(review)
@@ -135,7 +135,7 @@ o
         </div>
       </div>
       <div className="reviews-wrapper">
-        <ReviewForm author={review.author} rating={review.rating} description={review.description} onSubmit={handleSubmit} onChange={handleSubmit} />
+        <ReviewForm author={review.author} rating={review.rating} description={review.description} onSubmit={handleSubmit} onChange={handleChange} />
         <Reviews reviews={candy.reviews} />
       </div>
     </Layout>
