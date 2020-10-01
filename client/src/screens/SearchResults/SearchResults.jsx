@@ -79,7 +79,7 @@ import React from 'react'
 // import { useParams } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import Candy from "../../components/Candy/Candy"
-import Sort from '../../components/Sort/sort'
+import Sort from '../../components/Sort/Sort'
 
 
 const SearchResults = (props) => {
