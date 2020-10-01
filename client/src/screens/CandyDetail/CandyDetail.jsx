@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./CandyDetail.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { getCandy, deleteCandy, updateCandy } from "../../services/candies";
+import { getCandy, deleteCandy} from "../../services/candies";
 import { useParams, Link } from "react-router-dom";
 
-import ReviewForm from '../../components/ReviewForm/ReviewForm'
+import ReviewStills from '../../components/ReviewStills/ReviewStills'
 import Reviews from '../../components/Reviews/Reviews'
 
 const CandyDetail = (props) => {
@@ -12,11 +12,6 @@ const CandyDetail = (props) => {
   const [selectedImg, setSelectedImg] = useState("");
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
-  const [review, setReview] = useState({
-    author: '',
-    rating: '',
-    description: ''
-  })
 
   useEffect(() => {
     const fetchCandy = async () => {
@@ -26,21 +21,6 @@ const CandyDetail = (props) => {
     };
     fetchCandy();
   }, [id]);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setReview({
-      ...review,
-      [name]: value
-    })
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    candy.reviews.push(review)
-    setCandy(candy)
-    await updateCandy(id, candy)
-  }
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
@@ -135,7 +115,7 @@ const CandyDetail = (props) => {
         </div>
       </div>
       <div className="reviews-wrapper">
-        <ReviewForm author={review.author} rating={review.rating} description={review.description} onSubmit={handleSubmit} onChange={handleChange} />
+        <ReviewStills />
         <Reviews reviews={candy.reviews} />
       </div>
     </Layout>
