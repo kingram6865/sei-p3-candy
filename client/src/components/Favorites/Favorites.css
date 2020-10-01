@@ -1,0 +1,46 @@
+.favorites-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.favorites-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 110px;
+  margin-left: 30px;
+  width: 250px;
+}
+
+.favorites-name {
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: .5px .5px 10px rgb(174, 174, 174);
+}
+
+.favorites-blurb {
+  font-size: 12px;
+  text-shadow: .5px .5px 10px rgb(174, 174, 174);
+}
+
+.tap-in-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100px;
+  margin-left: 240px;
+}
+
+.tap-in {
+  display: flex;
+  height: 27px;
+  width: 90px;
+  background-color: white;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 300px;
+  margin-right: 15px;
+}

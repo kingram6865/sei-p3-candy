@@ -1,0 +1,22 @@
+.candy-manager-container {
+  display: flex;
+  margin-top: 40px;
+}
+
+.product-manager {
+  display: flex;
+  width: 90vw;
+  margin: 20px auto 0px;
+}
+
+.product-manager span {
+  font-size: 35px;
+  font-weight: 900;
+  margin-left: 139px;
+  text-shadow: .5px .5px 10px white;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,61 @@
+.candy-edit-container  {
+  display: flex;
+  margin: 20px auto;
+}
+
+.edit-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+}
+
+.input-name {
+  width: 260px;
+  height: 40px;
+}
+
+.input-price {
+  width: 168px;
+  height: 40px;
+}
+
+.textarea-description {
+  width: 480px;
+  height: 220px;
+}
+
+.edit-candy-image {
+  width: 300px;
+}
+
+.candy-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.image-container {
+  margin-bottom: 69px;
+}
+
+.input-name, .input-price {
+  padding-left: 10px;
+}
+
+.textarea-description {
+  padding: 10px;
+}
+
+.input-name, .textarea-description {
+  font-size: 15px;
+}
+
+.input-price {
+  font-size: 20px;
+}
+
+.input-img {
+  margin: 11px 0px;
+  height: 40px;
+}

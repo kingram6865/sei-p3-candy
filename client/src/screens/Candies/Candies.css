@@ -1,0 +1,46 @@
+.candies-container-left {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-left: 131px;
+}
+
+.candies-screen-container {
+  display: flex;
+  width: 90vw;
+  margin: 150px auto 30px;
+  justify-content: space-between;
+  background: linear-gradient(rgb(145, 145, 145), rgb(145, 145, 145)) no-repeat center/1px 90%;
+}
+
+.candy-link-modal {
+  margin: 0px 0px 20px 8px;
+  padding: 8px;
+  color: #707070;
+  font-size: 16px;
+}
+
+.candy-each-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.edit-add-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-right: 131px;
+}
+
+.candies-text {
+  font-size: 41px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-add-text {
+  font-size: 41px;
+  text-align: center;
+  margin-bottom: 20px;
+}
