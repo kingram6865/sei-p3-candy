@@ -11,7 +11,7 @@ const Layout = (props) => {
       <div className="layout-children">
         <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/PinkDripHeader.jpg)` }} className="layout-header-img"></div>
         <div className="layout-searchbar">
-          <SearchBar />
+          <SearchBar handleSearch={props.handleSearch} setQueryResults={props.setQueryResults}/>
         </div>
         {props.children}
       </div>

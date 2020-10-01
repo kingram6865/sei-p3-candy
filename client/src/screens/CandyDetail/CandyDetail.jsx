@@ -47,7 +47,7 @@ const CandyDetail = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout handleSearch={props.handleSearch} setQueryResults={props.setQueryResults} >
       <div className="candy-detail-container">
         <div className="nitty-gritty">
               <span>The Nitty Gritty</span>

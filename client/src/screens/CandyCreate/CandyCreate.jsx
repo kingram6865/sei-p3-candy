@@ -36,7 +36,7 @@ const CandyCreate = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout handleSearch={props.handleSearch} setQueryResults={props.setQueryResults} >
       <div className="create-candy-container">
         <form className="create-form" onSubmit={handleSubmit}>
           <input
