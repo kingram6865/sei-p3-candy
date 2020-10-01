@@ -1,5 +1,6 @@
 .review-container {
-  
+  outline: 5px;
+  outline-color: black;
 }
 
 .review-icon {
