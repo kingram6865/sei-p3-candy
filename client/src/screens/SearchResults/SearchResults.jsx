@@ -79,13 +79,13 @@ import React from 'react'
 // import { useParams } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import Candy from "../../components/Candy/Candy"
-// import Sort from '../../components/sort/sort'
+import Sort from '../../components/sort/sort'
 
 
 const SearchResults = (props) => {
-  let productsJSX
-
-  productsJSX = props.queryResults.map((candy, index) =>
+  
+  const candies = props.queriedCandy && props.queriedCandy.length > 0 ? props.queriedCandy : props.queryResults
+  const productsJSX = candies.map((candy, index) =>
   <Candy
     _id={candy._id}
     productName={candy.productName}
@@ -103,8 +103,8 @@ return (
       <Layout handleSearch={props.handleSearch} setQueryResults={props.setQueryResults}>
         <div className="results-container">
         <h3>Search Results</h3>
-        {/* <Sort handleSort={props.handleSort} setQueriedCandy={props.setQueriedCandy} />
-        {console.log(candies)} */}
+        <Sort handleSort={props.handleSort} setQueriedCandy={props.setQueriedCandy} />
+        {console.log(candies)}
           { productsJSX }
         </div>
       </Layout>

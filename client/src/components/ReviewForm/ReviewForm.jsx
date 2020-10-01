@@ -46,4 +46,4 @@ const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
   );
 };
 
-export default ReviewForm
+export default ReviewForm;

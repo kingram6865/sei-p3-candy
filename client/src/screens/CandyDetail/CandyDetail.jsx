@@ -22,6 +22,21 @@ const CandyDetail = (props) => {
     fetchCandy();
   }, [id]);
 
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setReview({
+      ...review,
+      [name]: value
+    })
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    candy.reviews.push(review)
+    setCandy(candy)
+    await updateCandy(id, candy)
+  }
+
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
@@ -115,7 +130,7 @@ const CandyDetail = (props) => {
         </div>
       </div>
       <div className="reviews-wrapper">
-        <ReviewStills />
+        <ReviewForm author={review.author} rating={review.rating} description={review.description} onSubmit={handleSubmit} onChange={handleChange} />
         <Reviews reviews={candy.reviews} />
       </div>
     </Layout>
