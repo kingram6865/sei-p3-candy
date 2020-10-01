@@ -6,7 +6,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import { getCandies } from "../../services/candies";
 import "./Home.css";
 
-const Home = () => {
+const Home = (props) => {
   const [allCandies, setAllCandies] = useState([]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Home = () => {
         <div className="img-carousel"><Carousel /></div>
 
         <div className="searchbar-container">
-          <SearchBar //onSubmit={handleSubmit} onChange={handleSearch}
+          <SearchBar handleSearch={props.handleSearch} setQueryResults={props.setQueryResults}
           />
         </div>
         <div className="home-text-container">

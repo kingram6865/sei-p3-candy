@@ -39,8 +39,6 @@
 
 .selected-img {
   display: flex;
-  width: 352px;
-  height: 256px;
 }
 
 .thumbnail-imgs-container {
