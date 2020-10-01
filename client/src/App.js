@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   const [queryResults, setQueryResults] = useState([])
-  const [sortType, setSortType] = useState([]);
+  const [reset, setReset] = useState(false);
   const [queriedCandy, setQueriedCandy] = useState([])
 
   const handleSearch = (item, arr) => {
@@ -20,22 +20,26 @@ function App() {
     return(queryResult)
   }
 
+
   const handleSort = (e) => {
     const type = e.target.value;
     console.log(type)
-    setSortType(type);
-    switch (sortType) {
+    switch (type) {
       case "name-ascending":
         setQueriedCandy(AZ(queryResults));
+        setReset(prevReset => !prevReset);
         break;
       case "name-descending":
         setQueriedCandy(ZA(queryResults));
+        setReset(prevReset => !prevReset);
         break;
       case "price-ascending":
         setQueriedCandy(lowestFirst(queryResults));
+        setReset(prevReset => !prevReset);
         break;
       case "price-descending":
         setQueriedCandy(highestFirst(queryResults));
+        setReset(prevReset => !prevReset);
         break;
       default:
         break;
