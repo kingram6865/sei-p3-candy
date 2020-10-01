@@ -42,10 +42,6 @@ function App() {
     }
   };
 
-// render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyDetail handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyCreate handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyEdit handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
   return (
     <div className="App">
       <Switch>
@@ -54,17 +50,6 @@ function App() {
         <Route exact path="/candies/:id" render={(props) =>  <CandyDetail handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
         <Route path="/add-candy" render={(props) =>  <CandyCreate handleSearch={handleSearch} setQueryResults={setQueryResults}/>} />
         <Route exact path="/candies/:id/edit" render={(props) =>  <CandyEdit handleSearch={handleSearch} setQueryResults={setQueryResults}/>} />
-        <Route exact path="/search-candies"
-          render={(props) =>
-            <SearchResults
-              handleSearch={handleSearch}
-              setQueryResults={setQueryResults}
-              queryResults={queryResults}
-              handleSort={handleSort}
-              queriedCandy={queriedCandy}
-              setQueriedCandy={setQueriedCandy}
-            />}
-        />
         <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
       </Switch>
     </div>

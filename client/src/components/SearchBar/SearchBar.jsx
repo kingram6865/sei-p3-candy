@@ -20,7 +20,6 @@ const SearchBar = (props) => {
   const handleSubmit = event => {
     event.preventDefault()
     history.push("/search-candies")
-
   }
 
   return (
