@@ -14,9 +14,9 @@
   position: absolute;
   background-repeat: no-repeat;
   height: 420px;
-  width: 100vw;
+  max-width: 100vw;
   min-width: 100%;
-  margin-top: -30px;
+  margin-top: -25px;
   z-index: -1;
 }
 

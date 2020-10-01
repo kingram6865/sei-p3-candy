@@ -14,7 +14,7 @@ function App() {
   const [queryResults, setQueryResults] = useState([])
   const [sortType, setSortType] = useState([]);
   const [queriedCandy, setQueriedCandy] = useState([])
-  
+
   const handleSearch = (item, arr) => {
     const queryResult = arr.filter(candy => candy.productName.toLowerCase().includes(item.toLowerCase()))
     return(queryResult)
@@ -69,7 +69,7 @@ function App() {
               setQueriedCandy={setQueriedCandy}
             />}
         />
-        <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
+        {/* <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} /> */}
       </Switch>
     </div>
   );

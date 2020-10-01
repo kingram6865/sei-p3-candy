@@ -4,6 +4,7 @@ import "./ReviewForm.css";
 const ReviewForm = ({ author, rating, description, onChange, onSubmit }) => {
   return (
     <form className="review-create-form" onSubmit={(e) => onSubmit(e)}>
+      <h1>Reviews</h1>
       <input
         className="review-input-author"
         placeholder="Name"

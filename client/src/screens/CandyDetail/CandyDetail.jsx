@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./CandyDetail.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { getCandy, deleteCandy, updateCandy } from "../../services/candies";
+import { getCandy, deleteCandy} from "../../services/candies";
 import { useParams, Link } from "react-router-dom";
 
-import ReviewForm from '../../components/ReviewForm/ReviewForm'
+import ReviewStills from '../../components/ReviewStills/ReviewStills'
 import Reviews from '../../components/Reviews/Reviews'
 
 const CandyDetail = (props) => {
@@ -12,11 +12,6 @@ const CandyDetail = (props) => {
   const [selectedImg, setSelectedImg] = useState("");
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
-  const [review, setReview] = useState({
-    author: '',
-    rating: '',
-    description: ''
-  })
 
   useEffect(() => {
     const fetchCandy = async () => {
