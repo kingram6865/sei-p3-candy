@@ -16,10 +16,7 @@ function App() {
     const queryResult = arr.filter(candy => candy.productName.toLowerCase().includes(item.toLowerCase()))
     return(queryResult)
   }
-// render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyDetail handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyCreate handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
-// render={(props) =>  <CandyEdit handleSearch={handleSearch} setQueryResults={setQueryResults}/>}
+
   return (
     <div className="App">
       <Switch>
