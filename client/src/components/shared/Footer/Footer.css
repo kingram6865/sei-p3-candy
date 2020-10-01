@@ -20,8 +20,15 @@ footer {
   height: 0;
 }
 
-.logo-img {
+.footer-logo-img {
   margin-left: 139px;
+  width: 190px;
+  height: 123px;
+}
+
+.company-text {
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .copyright-container {

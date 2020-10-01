@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        <div className="logo-img">insert-logo-here</div>
+        <div >
+          <img className="footer-logo-img" src={`${process.env.PUBLIC_URL}/images/SUGAR-MAMA-LOGO-SQUARE.png`} alt="sugar-mama-logo"/>
+        </div>
         <div className="company-text-container">
           <div className="company-text">Company Information</div>
           <div className="our-story">Our Story</div>
