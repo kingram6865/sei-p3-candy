@@ -17,31 +17,6 @@ function App() {
     return(queryResult)
   }
 
-<<<<<<< HEAD
-  const handleSort = (e) => {
-    const type = e.target.value;
-    console.log(type)
-    setSortType(type);
-    switch (sortType) {
-      case "name-ascending":
-        setQueriedCandy(AZ(queryResults));
-        break;
-      case "name-descending":
-        setQueriedCandy(ZA(queryResults));
-        break;
-      case "price-ascending":
-        setQueriedCandy(lowestFirst(queryResults));
-        break;
-      case "price-descending":
-        setQueriedCandy(highestFirst(queryResults));
-        break;
-      default:
-        break;
-    }
-  };
-
-=======
->>>>>>> a561552922e92e930743b22a4a222cdfbd3a65fe
   return (
     <div className="App">
       <Switch>
@@ -50,7 +25,13 @@ function App() {
         <Route exact path="/candies/:id" render={(props) =>  <CandyDetail handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
         <Route path="/add-candy" render={(props) =>  <CandyCreate handleSearch={handleSearch} setQueryResults={setQueryResults}/>} />
         <Route exact path="/candies/:id/edit" render={(props) =>  <CandyEdit handleSearch={handleSearch} setQueryResults={setQueryResults}/>} />
-        <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
+        <Route exact path="/search-candies" 
+          render={(props) =>  
+            <SearchResults 
+              handleSearch={handleSearch} 
+              setQueryResults={setQueryResults} 
+              queryResults={queryResults} 
+            />} />
       </Switch>
     </div>
   );
