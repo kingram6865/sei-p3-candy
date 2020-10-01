@@ -6,20 +6,18 @@ import CandyEdit from './screens/CandyEdit/CandyEdit'
 import CandyDetail from './screens/CandyDetail/CandyDetail'
 import CandyManager from './screens/CandyManager/CandyManager'
 import SearchResults from './screens/SearchResults/SearchResults'
-import { AZ, ZA, lowestFirst, highestFirst } from "./utils/sort";
 
 import './App.css';
 
 function App() {
   const [queryResults, setQueryResults] = useState([])
-  const [sortType, setSortType] = useState([]);
-  const [queriedCandy, setQueriedCandy] = useState([])
   
   const handleSearch = (item, arr) => {
     const queryResult = arr.filter(candy => candy.productName.toLowerCase().includes(item.toLowerCase()))
     return(queryResult)
   }
 
+<<<<<<< HEAD
   const handleSort = (e) => {
     const type = e.target.value;
     console.log(type)
@@ -42,6 +40,8 @@ function App() {
     }
   };
 
+=======
+>>>>>>> a561552922e92e930743b22a4a222cdfbd3a65fe
   return (
     <div className="App">
       <Switch>

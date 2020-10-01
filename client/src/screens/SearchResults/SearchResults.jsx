@@ -4,7 +4,9 @@ import Layout from "../../components/shared/Layout/Layout";
 import Candy from "../../components/Candy/Candy"
 
 const SearchResults = (props) => {
- let productsJSX = props.queryResults.map((candy, index) =>
+  let productsJSX
+  
+  productsJSX = props.queryResults.map((candy, index) =>
   <Candy
     _id={candy._id}
     productName={candy.productName}
@@ -21,7 +23,7 @@ return (
     <>
       <Layout handleSearch={props.handleSearch} setQueryResults={props.setQueryResults}>
         <div className="results-container">
-        <h3>Search Results</h3>
+          <h3>Search Results</h3>
           { productsJSX }
         </div>
       </Layout>
