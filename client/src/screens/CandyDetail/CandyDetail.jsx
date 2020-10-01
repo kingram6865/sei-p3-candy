@@ -34,7 +34,7 @@ const CandyDetail = (props) => {
       [name]: value
     })
   }
-o
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     candy.reviews.push(review)
