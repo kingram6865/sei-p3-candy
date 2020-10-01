@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./Favorites.css";
 
 const Favorites = (props) => {
+  // const blurbs = ["LIFE IS SHORT, MAKE IT SWEET", "DON'T RESIST IT, TASTE IT", "HITS THE SWEET SPOT", "A SWEET TOOTH'S PARADISE", "A WILD FLAVOR TRIP"];
+
+  // const blurb = blurbs[Math.floor(Math.random() * blurbs.length)];
+
   return (
     <div className="favorites">
       <Link className="favorites-link" to={`/candies/${props.id}`}>
@@ -10,7 +14,7 @@ const Favorites = (props) => {
           className="fav-img-div"
           style={{
             background:
-              `linear-gradient(to top, rgba(148, 148, 148, 1), transparent 50%), url("${props.img}")`,
+              `linear-gradient(to top, rgba(181, 181, 181, .5), transparent), url("${props.img}")`,
             // backgroundImage: `url("${props.img}")`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -20,8 +24,13 @@ const Favorites = (props) => {
           }}
           alt={props.name}
         >
-          <div className="favorites-name">{props.name}</div>
-          <div className="tap-in">Tap In</div>
+          <div className="favorites-text-container">
+            <div className="favorites-name">{props.name}</div>
+            <div className="favorites-blurb">{props.blurb}</div>
+          </div>
+          <div className="tap-in-container">
+            <div className="tap-in">Tap In</div>
+          </div>
         </div>
       </Link>
     </div>
