@@ -4,7 +4,9 @@ import Layout from "../../components/shared/Layout/Layout";
 import Candy from "../../components/Candy/Candy"
 import Sort from '../../components/Sort/Sort'
 
+
 const SearchResults = (props) => {
+  let productsJSX
   // const { results } = useParams()
   //const data = JSON.parse(results)
   // console.log(`[SearchResults]: ${props.match.params}`)
@@ -35,6 +37,19 @@ const SearchResults = (props) => {
   // }
   const candies = props.queriedCandy && props.queriedCandy.length > 0 ? props.queriedCandy : props.queryResults
   const productsJSX = candies.map((candy, index) =>
+  <Candy
+    _id={candy._id}
+    productName={candy.productName}
+    price={candy.price}
+    imgURL1={candy.imgURL1}
+    imgURL2={candy.imgURL2}
+    imgURL3={candy.imgURL3}
+    description={candy.description}
+    key={index}
+  />
+  )
+
+  productsJSX = props.queryResults.map((candy, index) =>
   <Candy
     _id={candy._id}
     productName={candy.productName}

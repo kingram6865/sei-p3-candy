@@ -65,6 +65,7 @@ function App() {
               setQueriedCandy={setQueriedCandy}
             />}
         />
+        <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} />
       </Switch>
     </div>
   );
