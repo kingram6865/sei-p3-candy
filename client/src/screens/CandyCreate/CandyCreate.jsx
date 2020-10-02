@@ -41,7 +41,7 @@ const CandyCreate = (props) => {
         <form className="create-form" onSubmit={handleSubmit}>
           <div className="create-edit-price">
             <input
-              className="input-name"
+              className="add-input-name"
               name="productName"
               placeholder="Product Name"
               value={candy.productName}
@@ -49,7 +49,7 @@ const CandyCreate = (props) => {
               onChange={handleChange}
             />
             <input
-              className="input-price"
+              className="add-input-price"
               name="price"
               placeholder="Price"
               value={candy.price}

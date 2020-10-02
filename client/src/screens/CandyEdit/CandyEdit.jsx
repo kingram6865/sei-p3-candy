@@ -114,7 +114,7 @@ const CandyEdit = (props) => {
         </div>
         <div className="edit-img-thumbnails-container">
           <div
-            className="candy-detail-image"
+            className="edit-candy-detail-image"
             style={{
               backgroundImage: `url("${candy.imgURL1}")`,
               backgroundRepeat: "no-repeat",
@@ -128,7 +128,7 @@ const CandyEdit = (props) => {
             onClick={(e) => setSelectedImg(candy.imgURL1)}
           ></div>
           <div
-            className="candy-detail-image"
+            className="edit-candy-detail-image"
             style={{
               backgroundImage: `url("${candy.imgURL2}")`,
               backgroundRepeat: "no-repeat",
@@ -142,7 +142,7 @@ const CandyEdit = (props) => {
             onClick={(e) => setSelectedImg(candy.imgURL2)}
           ></div>
           <div
-            className="candy-detail-image"
+            className="edit-candy-detail-image"
             style={{
               backgroundImage: `url("${candy.imgURL3}")`,
               backgroundRepeat: "no-repeat",

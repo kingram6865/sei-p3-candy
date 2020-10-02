@@ -21,6 +21,7 @@
 
 .favorites-blurb {
   font-size: 12px;
+  font-weight: bold;
   text-shadow: .5px .5px 10px rgb(174, 174, 174);
 }
 

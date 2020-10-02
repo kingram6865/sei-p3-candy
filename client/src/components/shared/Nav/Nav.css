@@ -5,6 +5,7 @@ nav {
   max-height: 100px;
   max-width: 100%;
   width: 100%;
+  font-family: 'Nunito', sans-serif;
 }
 
 .admin-login {
@@ -20,6 +21,7 @@ nav {
   color: black;
   margin-right: 40px;
   font-size: 18px;
+  font-size: bold;
 }
 
 .navbar {
@@ -34,6 +36,8 @@ nav {
   width: 100vw;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
 }
 
 .navbar-links a {

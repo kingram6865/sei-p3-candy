@@ -1,6 +1,7 @@
 .candy-create-title {
   margin-bottom: 48px;
   text-shadow: .5px .5px 10px white;
+  font-weight: bold;
 }
 
 .create-form-container {
@@ -21,6 +22,26 @@
   margin-bottom: 22px;
 }
 
+.create-form input, .create-form textarea {
+  border-radius: 8px;
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.add-input-name, .add-input-price {
+  font-size: 14px;
+  height: 40px;
+  padding: 0px 10px;
+}
+
+.add-input-name {
+  width: 250px;
+}
+
+.add-input-price {
+  width: 200px;
+}
+
 .textarea-description {
   margin-bottom: 22px;
 }
@@ -28,6 +49,7 @@
 .create-input-img {
   margin-bottom: 22px;
   height: 40px;
+  padding: 0px 10px;
 }
 
 .create-submit-container {
