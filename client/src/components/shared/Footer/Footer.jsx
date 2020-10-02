@@ -70,10 +70,13 @@ const Footer = () => {
         </div>
         <div className="break"></div>
         <div className="copyright-container">
-          <p>
+          <div className="copyright">
             © 2020 Sugar Mama's All rights reserved. Privacy Policy & Terms of
             Use
-          </p>
+          </div>
+          <div className="created-by">
+            By: Alex P, Diane S, Ken I, Michael M
+          </div>
         </div>
       </div>
     </footer>

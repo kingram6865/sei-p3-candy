@@ -24,17 +24,20 @@ const SearchBar = (props) => {
 
   return (
     <form className="search-form" onSubmit={handleSubmit}>
-      <input
+      <div className="search-input-container">
+        <input
         className="search-input"
         value={props.value}
         onChange={(e) => {
           props.setQueryResults(props.handleSearch(e.target.value, inventory))
         }}
         name="search"
-        placeholder="How Can Mama Help?"
+        placeholder="How Can Mama Help?   "
         type="text"
         autoFocus
-      />
+        />
+        <div className="search-icon"><img src={"https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg"} alt="magnifier-icon" /></div>
+      </div>
     </form>
   )
 };

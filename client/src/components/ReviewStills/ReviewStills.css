@@ -1,13 +1,55 @@
-.review-container {
-  
+.review-area {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 70vw;
+  font-family: 'Nunito', sans-serif;
+}
+
+.review-area h1 {
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.each-review-container {
+  display: flex;
+  flex-direction: column;
+  width: 352px;
+  border: 1px solid darkgrey;
+}
+
+.review-content {
+  margin: 20px;
+}
+
+.person-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rating-name-container {
+  display: flex;
+  align-items: center;
+  margin: 8px 0px;
+}
+
+.rating-container {
+  margin-right: 18px;
 }
 
 .review-icon {
-  width: 70px;
-  height: 70px;
+  width: 39px;
+  height: 39px;
+  margin-right: 18px;
 }
 
 .star-rating {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }

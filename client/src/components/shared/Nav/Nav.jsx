@@ -13,11 +13,11 @@ const Nav = () => {
           <div className="dead-links">SHOP</div>
           <div className="dead-links">GIFTS</div>
           <Link to="/">
-            <img src={`${process.env.PUBLIC_URL}/images/SUGAR-MAMA-LOGO-SQUARE.png`} alt="sugar-mama-logo"/>
+            <img src={`${process.env.PUBLIC_URL}/images/SUGAR-MAMA-LOGO-SQUARE.png`} alt="sugar-mama-logo" />
           </Link>
           <div className="dead-links">ABOUT</div>
           <div className="dead-links">VISIT</div>
-          <div className="cart-image">cartlogo</div>
+          <div className="cart-image"><img src={`${process.env.PUBLIC_URL}/images/shopping-cart.png`} alt="cart-icon" /></div>
         </div>
       </div>
     </nav>

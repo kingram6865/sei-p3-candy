@@ -1,6 +1,7 @@
 .candy-detail-container {
   display: flex;
   flex-direction: column;
+  font-family: 'Nunito', sans-serif;
 }
 
 .nitty-gritty {
@@ -21,18 +22,25 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0px 80px 10px 0px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .candy-detail {
   display: flex;
-  margin: 120px auto;
+  margin: 120px auto 100px;
   width: 70vw;
 }
 
 .candy-detail-img-container {
   display: flex;
+  width: 70vw;
+  margin-right: 85px;
+}
+
+.selected-img-container {
+  width: 352px;
+  display: flex;
   flex-direction: column;
-  width: 50vw;
   margin-right: 85px;
 }
 
@@ -42,7 +50,7 @@
 
 .thumbnail-imgs-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 30px;
 }
 
@@ -58,6 +66,7 @@
 .name {
   font-size: 40px;
   font-weight: 900;
+  text-shadow: .5px .5px 10px white;
 }
 
 .price {
@@ -96,4 +105,9 @@
   color: white;
   font-weight: 700;
   border-radius: 5px;
+  margin: 8px;
+}
+
+.reviews-wrapper {
+  display: flex;
 }
