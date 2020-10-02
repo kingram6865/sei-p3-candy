@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { getCandies } from "../../services/candies";
-import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort";
 import "./Sort.css";
 
 const Sort = (props) => {
@@ -17,36 +16,36 @@ const Sort = (props) => {
     fetchCandy();
   }, []);
 
-  const handleSort = (e) => {
-    const type = e.target.value;
-    console.log(type)
-    setSortType(type);
-    switch (sortType) {
-      case "name-ascending":
-        setQueriedCandy(AZ(queriedCandy));
-        break;
-      case "name-descending":
-        setQueriedCandy(ZA(queriedCandy));
-        break;
-      case "price-ascending":
-        setQueriedCandy(lowestFirst(queriedCandy));
-        break;
-      case "price-descending":
-        setQueriedCandy(highestFirst(queriedCandy));
-        break;
-      default:
-        break;
-    }
-  };
+  // const handleSort = (e) => {
+  //   const type = e.target.value;
+  //   console.log(type)
+  //   setSortType(type);
+  //   switch (sortType) {
+  //     case "name-ascending":
+  //       setQueriedCandy(AZ(queriedCandy));
+  //       break;
+  //     case "name-descending":
+  //       setQueriedCandy(ZA(queriedCandy));
+  //       break;
+  //     case "price-ascending":
+  //       setQueriedCandy(lowestFirst(queriedCandy));
+  //       break;
+  //     case "price-descending":
+  //       setQueriedCandy(highestFirst(queriedCandy));
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
-  const handleChange = (event) => {
-    props.onChange(event.target.value);
+  const handleSubmit = (event) => {
+    event.preventDefault()
   };
 
   return (
-    <form className="sort-container" onSubmit={handleSort}>
+    <form className="sort-container" onSubmit={handleSubmit}>
       <label htmlFor="sort">SORT BY:</label>
-      <select className="sort" onChange={handleChange}>
+      <select className="sort" onChange={(e) => props.handleSort(e)}>
         <option className="option" value="name-ascending">
           &nbsp; Alphabetically, A-Z &nbsp;
         </option>
