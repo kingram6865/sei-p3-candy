@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+import { deleteCandy } from "../../services/candies";
 import styled from "styled-components";
 import "./Candy.css";
 
@@ -13,16 +14,37 @@ const CandyImgDiv = styled.div`
 `;
 
 const Candy = (props) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     // <div className="candy-each-container">
-      <div className="each-candy">
-        <Link className="candy-each-link" to={`/candies/${props._id}`}>
-          <CandyImgDiv className="candy-each-image1" imgURL1={props.imgURL1} />
-          <div className="candy-each-name">{props.productName}</div>
-          <div className="candy-each-price">{`$${props.price}`}</div>
-          {/* <div className="description">{props.description}</div> */}
-        </Link>
+    <div className="each-candy">
+      <div
+        className="candy-onhover-container"
+        onMouseOver={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="candy-imgdiv">
+          <CandyImgDiv className="candy-each-image1" imgURL1={props.imgURL1}>
+            {isHovered && (
+              <div className="edit-delete-buttons">
+                <button onClick={() => {
+                  props.setToggleEdit(true)
+                  props.setCandyEditId(props._id)
+                }}>Edit</button>
+                <button onClick={() => {
+                  deleteCandy(props._id)
+                  window.location.reload(false);
+                }}>Delete</button>
+              </div>
+            )}
+          </CandyImgDiv>
+        </div>
+        <div className="candy-each-name">{props.productName}</div>
+        <div className="candy-each-price">{`$${props.price}`}</div>
+        {/* <div className="description">{props.description}</div> */}
       </div>
+    </div>
     // </div>
   );
 };
