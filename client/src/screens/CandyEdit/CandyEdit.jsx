@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./CandyEdit.css";
-import { useParams, Redirect } from "react-router-dom";
-import { getCandy, updateCandy } from "../../services/candies";
+import { Redirect } from "react-router-dom";
+import { updateCandy } from "../../services/candies";
 
 const CandyEdit = (props) => {
   const [selectedImg, setSelectedImg] = useState("");
   const [candy, setCandy] = useState({
-    productName: "",
-    price: "",
-    imgURL1: "",
-    imgURL2: "",
-    imgURL3: "",
-    description: "",
+    productName: props.productName,
+    price: props.price,
+    imgURL1: props.imgURL1,
+    imgURL2: props.imgURL2,
+    imgURL3: props.imgURL3,
+    description: props.description,
   });
 
   const [isUpdated, setUpdated] = useState(false);
-  let { id } = useParams();
-
-  useEffect(() => {
-    const fetchCandy = async () => {
-      const thisCandy = await getCandy(id);
-      setCandy(thisCandy);
-    };
-    fetchCandy();
-  }, [id]);
+  // let { id } = useParams();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -35,13 +27,13 @@ const CandyEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let { id } = props.match.params;
-    const updated = await updateCandy(id, candy);
+    // let { id } = props.match.params;
+    const updated = await updateCandy(props._id, candy);
     setUpdated(updated);
   };
 
   if (isUpdated) {
-    return <Redirect to={`/candies/${props.match.params.id}`} />;
+    return <Redirect to={`/candies/${props._id}`} />;
   }
 
   return (
