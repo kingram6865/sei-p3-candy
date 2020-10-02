@@ -16,28 +16,6 @@ const Sort = (props) => {
     fetchCandy();
   }, []);
 
-  // const handleSort = (e) => {
-  //   const type = e.target.value;
-  //   console.log(type)
-  //   setSortType(type);
-  //   switch (sortType) {
-  //     case "name-ascending":
-  //       setQueriedCandy(AZ(queriedCandy));
-  //       break;
-  //     case "name-descending":
-  //       setQueriedCandy(ZA(queriedCandy));
-  //       break;
-  //     case "price-ascending":
-  //       setQueriedCandy(lowestFirst(queriedCandy));
-  //       break;
-  //     case "price-descending":
-  //       setQueriedCandy(highestFirst(queriedCandy));
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // };
-
   const handleSubmit = (event) => {
     event.preventDefault()
   };

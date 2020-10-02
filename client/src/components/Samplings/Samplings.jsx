@@ -17,7 +17,6 @@ const Samplings = (props) => {
     <div className="sampling">
       <Link className="sampling-link" to={`/candies/${props.id}`}>
         <SamplingImgDiv className="sampling-img" img={props.img} />
-        {/* <img className="sampling-img" src={props.img} alt={props.name} /> */}
         <div>{props.name}</div>
         <div>{`$${props.price} per pound`}</div>
       </Link>

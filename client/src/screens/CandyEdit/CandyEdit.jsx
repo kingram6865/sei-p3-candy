@@ -15,7 +15,6 @@ const CandyEdit = (props) => {
   });
 
   const [isUpdated, setUpdated] = useState(false);
-  // let { id } = useParams();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -27,7 +26,6 @@ const CandyEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // let { id } = props.match.params;
     const updated = await updateCandy(props._id, candy);
     setUpdated(updated);
   };

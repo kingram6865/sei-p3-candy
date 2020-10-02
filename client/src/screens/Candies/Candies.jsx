@@ -3,11 +3,9 @@ import './Candies.css'
 import Candy from '../../components/Candy/Candy'
 import CandyCreate from '../../screens/CandyCreate/CandyCreate'
 import CandyEdit from '../../screens/CandyEdit/CandyEdit'
-// import Layout from '../../components/shared/Layout/Layout'
 import { getCandies } from '../../services/candies'
 
 const Candies = (props) => {
-  // const [allCandies, setAllCandies] = useState([])
   const [queriedCandies, setQueriedCandies] = useState([])
   const [toggleEdit, setToggleEdit] = useState(false)
   const [candyEditId, setCandyEditId] = useState('')
@@ -15,7 +13,6 @@ const Candies = (props) => {
   useEffect(() => {
     const fetchCandies = async () => {
       const candies = await getCandies()
-      // setAllCandies(candies)
       setQueriedCandies(candies)
     }
     fetchCandies()

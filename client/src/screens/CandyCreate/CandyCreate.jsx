@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./CandyCreate.css";
-// import Layout from "../../components/shared/Layout/Layout";
-// import { Redirect } from "react-router-dom";
 import { createCandy } from "../../services/candies";
 
 const CandyCreate = (props) => {
@@ -37,7 +35,6 @@ const CandyCreate = (props) => {
   }
 
   return (
-    // <Layout handleSearch={props.handleSearch} setQueryResults={props.setQueryResults} >
     <div className="create-candy-container">
       <div className="candy-create-title">Add New Product</div>
         <form className="create-form" onSubmit={handleSubmit}>
@@ -95,7 +92,6 @@ const CandyCreate = (props) => {
           </button>
         </form>
       </div>
-    // </Layout>
   );
 };
 

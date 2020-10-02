@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import { deleteCandy } from "../../services/candies";
 import styled from "styled-components";
 import "./Candy.css";
@@ -17,7 +16,6 @@ const Candy = (props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    // <div className="candy-each-container">
     <div className="each-candy">
       <div
         className="candy-onhover-container"
@@ -42,10 +40,8 @@ const Candy = (props) => {
         </div>
         <div className="candy-each-name">{props.productName}</div>
         <div className="candy-each-price">{`$${props.price}`}</div>
-        {/* <div className="description">{props.description}</div> */}
       </div>
     </div>
-    // </div>
   );
 };
 
