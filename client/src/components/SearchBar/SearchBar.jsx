@@ -31,7 +31,7 @@ const SearchBar = (props) => {
           props.setQueryResults(props.handleSearch(e.target.value, inventory))
         }}
         name="search"
-        placeholder="How Can Mama Help?"
+        placeholder="How Can Mama Help?   "
         type="text"
         autoFocus
       />
