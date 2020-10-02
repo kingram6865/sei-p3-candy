@@ -4,7 +4,6 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getCandy, deleteCandy} from "../../services/candies";
 import { useParams, Link, useHistory } from "react-router-dom";
 import ReviewStills from '../../components/ReviewStills/ReviewStills'
-import Reviews from '../../components/Reviews/Reviews'
 
 const CandyDetail = (props) => {
   const [candy, setCandy] = useState(null);
@@ -99,7 +98,6 @@ const CandyDetail = (props) => {
               ></div>
             </div>
           </div>
-
           <div className="details-container">
             <div className="name">{candy.productName}</div>
             <div className="price">{`Price: $${candy.price}/lb`}</div>
@@ -126,8 +124,8 @@ const CandyDetail = (props) => {
         </div>
       </div>
       <div className="reviews-wrapper">
-        <ReviewStills  />
-        <Reviews reviews={candy.reviews} />
+        <ReviewStills />
+        {/* post mvp - reviews in db render here */}
       </div>
     </Layout>
   );

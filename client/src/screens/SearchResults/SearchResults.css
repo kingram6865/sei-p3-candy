@@ -1,0 +1,40 @@
+.search-results-title {
+  width: 70vw;
+  margin: 20px auto 0px;
+  display: flex;
+}
+
+.search-results-title span {
+  font-size: 35px;
+  font-weight: 900;
+  text-shadow: .5px .5px 10px white;
+}
+
+.results-container {
+  width: 70vw;
+  display: flex;
+  margin: 40px auto;
+}
+
+.search-results-screen {
+  max-width: 70vw;
+  min-width: 60vw;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0px;
+}
+
+.search-sort-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.search-results-products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 70vw;
+  width: 60vw;
+  min-height: 300px;
+}
