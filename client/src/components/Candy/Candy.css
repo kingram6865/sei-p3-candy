@@ -20,4 +20,48 @@
   display: flex;
   margin: 0px 8px;
   align-items: space-between;
+  margin-bottom: 40px;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0px 0px 2px 0px;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  margin: 0;
+  border: none;
+}
+
+.edit-button {
+  background-color: black;
+  color: white;
+  margin: 0;
+  border: none;
+}
+
+.edit-delete-buttons button {
+  width: 50px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.edit-delete-buttons a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0px 8px;
+  display: flex;
+  align-items: baseline;
+  border-radius: 2px;
+}
+
+.candy-each-image1 {
+  display: flex;
+  align-items: flex-end;
 }

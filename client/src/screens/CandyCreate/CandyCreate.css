@@ -1,0 +1,46 @@
+.candy-create-title {
+  margin-bottom: 48px;
+}
+
+.create-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-edit-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.textarea-description {
+  margin-bottom: 22px;
+}
+
+.create-input-img {
+  margin-bottom: 22px;
+  height: 40px;
+}
+
+.create-submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  width: 92px;
+  height: 31px;
+  font-size: 17px;
+  font-weight: 500px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
