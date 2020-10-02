@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { deleteCandy } from "../../services/candies";
 import styled from "styled-components";
 import "./Candy.css";
@@ -17,7 +17,6 @@ const Candy = (props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    // <div className="candy-each-container">
     <div className="each-candy">
       <div
         className="candy-onhover-container"
@@ -25,27 +24,27 @@ const Candy = (props) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="candy-imgdiv">
-          <CandyImgDiv className="candy-each-image1" imgURL1={props.imgURL1}>
+          <CandyImgDiv className="candy-each-image1"
+            imgURL1={props.imgURL1}>
             {isHovered && (
               <div className="edit-delete-buttons">
-                <button onClick={() => {
+                <Link to={`/candies/${props._id}`}>Details</Link>
+                <button className="edit-button" onClick={() => {
                   props.setToggleEdit(true)
                   props.setCandyEditId(props._id)
                 }}>Edit</button>
-                <button onClick={() => {
+                <button className="delete-button" onClick={() => {
                   deleteCandy(props._id)
                   window.location.reload(false);
-                }}>Delete</button>
+                  }}>Delete</button>
               </div>
             )}
-          </CandyImgDiv>
+            </CandyImgDiv>
         </div>
         <div className="candy-each-name">{props.productName}</div>
         <div className="candy-each-price">{`$${props.price}`}</div>
-        {/* <div className="description">{props.description}</div> */}
       </div>
     </div>
-    // </div>
   );
 };
 

@@ -1,0 +1,13 @@
+.sort-container {
+  border-radius: 8px;
+  background-color: white;
+}
+
+.sort {
+  border-radius: 8px;
+  background-color: white;
+}
+
+.select option {
+  background-color: white;
+}

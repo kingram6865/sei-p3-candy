@@ -10,6 +10,10 @@
   color: black;
 }
 
+.sampling-link div {
+  font-weight: bold;
+}
+
 .sampling-img:hover {
   opacity: 0.7;
   transition: 250ms all;
