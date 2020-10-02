@@ -32,7 +32,10 @@ const Candy = (props) => {
                   props.setToggleEdit(true)
                   props.setCandyEditId(props._id)
                 }}>Edit</button>
-                <button onClick={() => {deleteCandy(props._id)}}>Delete</button>
+                <button onClick={() => {
+                  deleteCandy(props._id)
+                  window.location.reload(false);
+                }}>Delete</button>
               </div>
             )}
           </CandyImgDiv>

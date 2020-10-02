@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./CandyDetail.css";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCandy, deleteCandy} from "../../services/candies";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import ReviewStills from '../../components/ReviewStills/ReviewStills'
 import Reviews from '../../components/Reviews/Reviews'
 
@@ -10,7 +10,9 @@ const CandyDetail = (props) => {
   const [candy, setCandy] = useState(null);
   const [selectedImg, setSelectedImg] = useState("");
   const [isLoaded, setLoaded] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchCandy = async () => {
@@ -23,6 +25,13 @@ const CandyDetail = (props) => {
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
+  }
+
+  const handleDelete = () => {
+    if (deleted) {
+      history.push('/candies')
+      // return <Redirect to={'/candies'} />
+    }
   }
 
   return (
@@ -98,13 +107,17 @@ const CandyDetail = (props) => {
             <div className="description">{candy.description}</div>
             <div className="button-container">
               <button className="edit-button">
-                <Link className="edit-link" to={`/candies/${candy._id}/edit`}>
+                <Link className="edit-link" to={`/candies`}>
                   EDIT ITEM
                 </Link>
               </button>
               <button
                 className="delete-button"
-                onClick={() => deleteCandy(candy._id)}
+                  onClick={() => {
+                    deleteCandy(candy._id)
+                    setDeleted(true)
+                    handleDelete()
+                  }}
               >
                 DELETE ITEM
               </button>
