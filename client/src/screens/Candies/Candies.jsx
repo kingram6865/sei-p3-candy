@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import './Candies.css'
 import Candy from '../../components/Candy/Candy'
+import CandyCreate from '../../screens/CandyCreate/CandyCreate'
+import CandyEdit from '../../screens/CandyEdit/CandyEdit'
 // import Layout from '../../components/shared/Layout/Layout'
 import { getCandies } from '../../services/candies'
 
 const Candies = (props) => {
   // const [allCandies, setAllCandies] = useState([])
   const [queriedCandies, setQueriedCandies] = useState([])
+  const [toggleEdit, setToggleEdit] = useState(false)
+  const [candyEditId, setCandyEditId] = useState('')
 
   useEffect(() => {
     const fetchCandies = async () => {
@@ -27,8 +31,14 @@ const Candies = (props) => {
       imgURL3={candy.imgURL3}
       description={candy.description}
       key={index}
+      setToggleEdit={setToggleEdit}
+      setCandyEditId={setCandyEditId}
     />
   )
+
+  const candy = queriedCandies.find((item, i) => { return candyEditId === item._id })
+
+  const editJSX = candy && <CandyEdit _id={candy._id} productName={candy.productName} price={candy.price} imgURL1={candy.imgURL1} imgURL2={candy.imgURL2} imgURL3={candy.imgURL3} description={candy.description} />
 
   return (
     <div className="candies-screen-container">
@@ -42,7 +52,7 @@ const Candies = (props) => {
         </div>
       </div>
       <div className="edit-add-container">
-        <h2>Placeholder ADD/EDIT</h2>
+        <div className="edit-add-text">{toggleEdit && candy ? editJSX : <CandyCreate />} </div>
       </div>
     </div>
   )

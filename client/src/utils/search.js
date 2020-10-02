@@ -1,6 +1,6 @@
-const handleSearch = (event, arr) => {
-    const newQueriedItems = arr.filter(candy => candy.productName.toLowerCase().includes(event.target.value.toLowerCase()))
-    return newQueriedItems
+const handleSearch = (item, arr) => {
+  const queryResult = arr.filter(candy => candy.productName.toLowerCase().includes(item.toLowerCase()))
+  return(queryResult)
 }
 
 export default handleSearch

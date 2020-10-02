@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./CandyDetail.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { getCandy, deleteCandy } from "../../services/candies";
-import { useParams, Link } from "react-router-dom";
-import styled from "styled-components";
+import { getCandy, deleteCandy} from "../../services/candies";
+import { useParams, Link, useHistory } from "react-router-dom";
+import ReviewStills from '../../components/ReviewStills/ReviewStills'
+import Reviews from '../../components/Reviews/Reviews'
 
 const CandyDetail = (props) => {
   const [candy, setCandy] = useState(null);
+  const [selectedImg, setSelectedImg] = useState("");
   const [isLoaded, setLoaded] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchCandy = async () => {
@@ -19,95 +23,112 @@ const CandyDetail = (props) => {
     fetchCandy();
   }, [id]);
 
-
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-  console.log(candy.imgURL1)
 
-  const CandyImgDiv1 = styled.div`
-    background-image: url(${!candy.imgURL1 ? "Loading..." : candy.imgURL1});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80px;
-    width: 80px;
-  `;
-
-  // const CandyImgDiv2 = styled.div`
-  //   background-image: url(${candy.imgURL2});
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   background-position: center;
-  //   height: 80px;
-  //   width: 80px;
-  // `;
-
-  // const CandyImgDiv3 = styled.div`
-  //   background-image: url(${candy.imgURL3});
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   background-position: center;
-  //   height: 80px;
-  //   width: 80px;
-  // `;
+  const handleDelete = () => {
+    if (deleted) {
+      history.push('/candies')
+      // return <Redirect to={'/candies'} />
+    }
+  }
 
   return (
-    <Layout>
+    <Layout handleSearch={props.handleSearch} setQueryResults={props.setQueryResults} >
       <div className="candy-detail-container">
         <div className="nitty-gritty">
-          <span>The Nitty Gritty</span>
-        </div>
+              <span>The Nitty Gritty</span>
+            </div>
         <div className="candy-detail">
           <div className="candy-detail-img-container">
-            <CandyImgDiv1
-              className="candy-detail-image"
-              imgURL1={candy.imgURL1}
-              alt={candy.productName}
-            />
-            {/* <CandyImgDiv2
-              className="candy-detail-image"
-              imgURL2={candy.imgURL2}
-            />
-            <CandyImgDiv3
-              className="candy-detail-image"
-              imgURL3={candy.imgURL3}
-            /> */}
-            {/* <img
-              className="candy-detail-image"
-              src={candy.imgURL1}
-              alt={candy.productName}
-            />
-            <img
-              className="candy-detail-image"
-              src={candy.imgURL2}
-              alt={candy.productName}
-            />
-            <img
-              className="candy-detail-image"
-              src={candy.imgURL3}
-              alt={candy.productName}
-            /> */}
+            <div className="selected-img-container">
+              <div
+                style={{
+                  backgroundImage: `url("${selectedImg === "" ? candy.imgURL1 : selectedImg}")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '256px',
+                  width: '352px',
+                }}
+                className="selected-img"
+                alt={candy.productName}
+              ></div>
+            <div className="thumbnail-imgs-container">
+              <div
+                className="candy-detail-image"
+                style={{
+                  backgroundImage: `url("${candy.imgURL1})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '80px',
+                  width: '80px',
+                  cursor: 'pointer'
+                }}
+                alt={candy.productName}
+                onClick={(e) => setSelectedImg(candy.imgURL1)}
+              ></div>
+              <div
+                className="candy-detail-image"
+                style={{
+                  backgroundImage: `url("${candy.imgURL2})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '80px',
+                  width: '80px',
+                  cursor: 'pointer'
+                }}
+                alt={candy.productName}
+                onClick={(e) => setSelectedImg(candy.imgURL2)}
+              ></div>
+              <div
+                className="candy-detail-image"
+                style={{
+                  backgroundImage: `url("${candy.imgURL3})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '80px',
+                  width: '80px',
+                  cursor: 'pointer'
+                }}
+                alt={candy.productName}
+                onClick={(e) => setSelectedImg(candy.imgURL3)}
+              ></div>
+            </div>
           </div>
 
           <div className="details-container">
             <div className="name">{candy.productName}</div>
-            <div className="price">{`${candy.price}`}</div>
+            <div className="price">{`Price: $${candy.price}/lb`}</div>
+            <div className="description">{candy.description}</div>
             <div className="button-container">
               <button className="edit-button">
-                <Link className="edit-link" to={`/candies/${candy._id}/edit`}>
-                  Edit Item
+                <Link className="edit-link" to={`/candies`}>
+                  EDIT ITEM
                 </Link>
               </button>
               <button
                 className="delete-button"
-                onClick={() => deleteCandy(candy._id)}
+                  onClick={() => {
+                    deleteCandy(candy._id)
+                    setDeleted(true)
+                    handleDelete()
+                  }}
               >
-                Delete Item
+                DELETE ITEM
               </button>
             </div>
           </div>
+          </div>
         </div>
+      </div>
+      <div className="reviews-wrapper">
+        <ReviewStills  />
+        <Reviews reviews={candy.reviews} />
       </div>
     </Layout>
   );
