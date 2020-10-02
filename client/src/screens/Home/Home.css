@@ -32,7 +32,6 @@
 .display-case {
   display: flex;
   flex-direction: column;
-  /* flex-flow: row wrap; */
   justify-content: center;
   margin: 0px auto;
   width: 1100px;

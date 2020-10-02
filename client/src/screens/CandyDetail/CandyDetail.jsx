@@ -30,7 +30,6 @@ const CandyDetail = (props) => {
   const handleDelete = () => {
     if (deleted) {
       history.push('/candies')
-      // return <Redirect to={'/candies'} />
     }
   }
 

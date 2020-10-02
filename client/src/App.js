@@ -20,7 +20,6 @@ function App() {
     return(queryResult)
   }
 
-
   const handleSort = (e) => {
     const type = e.target.value;
     console.log(type)
@@ -73,7 +72,6 @@ function App() {
               setQueriedCandy={setQueriedCandy}
             />}
         />
-        {/* <Route exact path="/search-candies" render={(props) =>  <SearchResults handleSearch={handleSearch} setQueryResults={setQueryResults} queryResults={queryResults} />} /> */}
       </Switch>
     </div>
   );

@@ -21,7 +21,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0px 80px 10px 0px;
-  /* margin-left: 50px; */
 }
 
 .candy-detail {
@@ -98,5 +97,3 @@
   font-weight: 700;
   border-radius: 5px;
 }
-
-/* 168, 31 */
